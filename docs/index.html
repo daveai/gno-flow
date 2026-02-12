@@ -314,6 +314,7 @@
   <div class="tabs">
     <button class="tab active" data-target="t7">7-Day Flows</button>
     <button class="tab" data-target="t30">30-Day Flows</button>
+    <button class="tab" data-target="th">Top Holders</button>
   </div>
 
   <div class="table-wrap active" id="t7">
@@ -321,6 +322,9 @@
   </div>
   <div class="table-wrap" id="t30">
     <div class="state-msg" id="s30">Loading&#8230;</div>
+  </div>
+  <div class="table-wrap" id="th">
+    <div class="state-msg" id="sh">Loading&#8230;</div>
   </div>
 </div>
 
@@ -451,6 +455,70 @@
     }
   }
 
+  function buildHoldersTable(rows, containerId, labels) {
+    var container = document.getElementById(containerId);
+    if (!rows || rows.length === 0) {
+      container.innerHTML = '<div class="state-msg">No data.</div>';
+      return;
+    }
+    var h = '<div class="table-scroll"><table>' +
+      '<colgroup>' +
+      '<col class="c-rank"><col class="c-addr"><col class="c-label">' +
+      '<col style="width:auto"><col class="c-count"><col class="c-chains">' +
+      '</colgroup>' +
+      '<thead><tr>' +
+      '<th class="r">#</th>' +
+      '<th>Address</th>' +
+      '<th>Label</th>' +
+      '<th class="r">Balance</th>' +
+      '<th class="r">Txfrs</th>' +
+      '<th>Chain</th>' +
+      '</tr></thead><tbody>';
+
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var addr = r.address || '';
+      var addrLower = addr.toLowerCase();
+      var label = (labels && labels[addrLower]) ? labels[addrLower] : '';
+      var labelHtml = label
+        ? '<span class="label-text">' + esc(label) + '</span>'
+        : '<span class="label-none">--</span>';
+
+      var bal = r.balance ? fmtGno(r.balance) : '--';
+      var hidden = i >= INITIAL_ROWS ? ' style="display:none" data-extra="1"' : '';
+
+      h += '<tr' + hidden + '>' +
+        '<td class="rank">' + (i + 1) + '</td>' +
+        '<td class="addr"><a href="' + explorerUrl(addr, r.chains) + '" target="_blank" rel="noopener">' + truncAddr(addr) + '</a></td>' +
+        '<td class="label">' + labelHtml + '</td>' +
+        '<td class="mono-r bal">' + esc(bal) + '</td>' +
+        '<td class="mono-r count">' + fmtNum(r.transfer_count) + '</td>' +
+        '<td class="chains">' + chainDots(r.chains || []) + '</td>' +
+        '</tr>';
+    }
+
+    h += '</tbody></table></div>';
+
+    if (rows.length > INITIAL_ROWS) {
+      h += '<div class="show-more-wrap"><button class="show-more-btn" data-container="' + containerId + '">' +
+        'Show all ' + rows.length + ' addresses</button></div>';
+    }
+
+    container.innerHTML = h;
+
+    var btn = container.querySelector('.show-more-btn');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var extras = container.querySelectorAll('tr[data-extra]');
+        for (var j = 0; j < extras.length; j++) {
+          extras[j].style.display = '';
+          extras[j].removeAttribute('data-extra');
+        }
+        this.parentNode.remove();
+      });
+    }
+  }
+
   // Tab switching
   var tabs = document.querySelectorAll('.tab');
   for (var i = 0; i < tabs.length; i++) {
@@ -480,13 +548,15 @@
       var labels = data.labels || {};
       buildTable(data.top_7d, 't7', labels);
       buildTable(data.top_30d, 't30', labels);
+      buildHoldersTable(data.top_holders, 'th', labels);
     })
     .catch(function (err) {
       document.getElementById('meta').textContent = 'Data unavailable';
-      document.getElementById('s7').className = 'state-msg err';
-      document.getElementById('s7').textContent = 'Error: ' + err.message;
-      document.getElementById('s30').className = 'state-msg err';
-      document.getElementById('s30').textContent = 'Error: ' + err.message;
+      var ids = ['s7', 's30', 'sh'];
+      for (var i = 0; i < ids.length; i++) {
+        var el = document.getElementById(ids[i]);
+        if (el) { el.className = 'state-msg err'; el.textContent = 'Error: ' + err.message; }
+      }
     });
 })();
 </script>

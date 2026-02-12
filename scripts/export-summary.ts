@@ -23,6 +23,7 @@ interface AccountRow {
   address: string;
   chainId: number;
   balance: string;
+  transferCount: number;
 }
 
 async function graphqlQuery(
@@ -97,6 +98,69 @@ async function fetchBalances(
   }
 
   return balanceMap;
+}
+
+async function fetchTopHolders(): Promise<
+  { address: string; balance: string; transfer_count: number; chains: string[] }[]
+> {
+  // Fetch all accounts sorted by balance descending, paginated
+  const holderMap = new Map<
+    string,
+    { balance: bigint; transferCount: number; chains: Set<string> }
+  >();
+  let offset = 0;
+  const limit = 5000;
+
+  while (true) {
+    const data = await graphqlQuery(
+      `
+      query TopAccounts($limit: Int!, $offset: Int!) {
+        Account(
+          where: { balance: { _gt: "0" } }
+          order_by: { balance: desc }
+          limit: $limit
+          offset: $offset
+        ) {
+          address
+          chainId
+          balance
+          transferCount
+        }
+      }
+    `,
+      { limit, offset }
+    );
+
+    const accounts = (data as { Account: AccountRow[] }).Account;
+    for (const acct of accounts) {
+      const addr = acct.address.toLowerCase();
+      const existing = holderMap.get(addr);
+      const chainName = CHAIN_NAMES[acct.chainId] || `chain_${acct.chainId}`;
+      if (existing) {
+        existing.balance += BigInt(acct.balance);
+        existing.transferCount += acct.transferCount;
+        existing.chains.add(chainName);
+      } else {
+        holderMap.set(addr, {
+          balance: BigInt(acct.balance),
+          transferCount: acct.transferCount,
+          chains: new Set([chainName]),
+        });
+      }
+    }
+    if (accounts.length < limit) break;
+    offset += limit;
+  }
+
+  return [...holderMap.entries()]
+    .sort((a, b) => (b[1].balance > a[1].balance ? 1 : b[1].balance < a[1].balance ? -1 : 0))
+    .slice(0, TOP_N)
+    .map(([address, entry]) => ({
+      address,
+      balance: bigintToDecimalString(entry.balance),
+      transfer_count: entry.transferCount,
+      chains: [...entry.chains].sort(),
+    }));
 }
 
 async function main() {
@@ -227,6 +291,9 @@ async function main() {
   console.log(`Fetching balances for ${allAddresses.size} addresses...`);
   const balances = await fetchBalances([...allAddresses]);
 
+  console.log("Fetching top holders...");
+  const topHolders = await fetchTopHolders();
+
   // Add balance to rows
   function addBalances(
     rows: { address: string; inflow: string; outflow: string; net_flow: string; transfer_count: number; chains: string[] }[]
@@ -251,6 +318,7 @@ async function main() {
   const summary = {
     top_7d: addBalances(top7d),
     top_30d: addBalances(top30d),
+    top_holders: topHolders,
     labels,
     synced_at: new Date().toISOString(),
     total_transfers: totalTransfers,
