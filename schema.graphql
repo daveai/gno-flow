@@ -1,0 +1,21 @@
+type Transfer {
+  id: ID!
+  chainId: Int!
+  blockNumber: Int!
+  blockTimestamp: Int!
+  transactionHash: String!
+  logIndex: Int!
+  from: String! @index
+  to: String! @index
+  value: BigInt!
+}
+
+type Account {
+  id: ID!
+  chainId: Int!
+  address: String! @index
+  balance: BigInt!
+  transferCount: Int!
+  lastUpdatedBlock: Int!
+  lastUpdatedTimestamp: Int!
+}

@@ -1,0 +1,28 @@
+name: gno-tracker
+description: GNO token transfer indexer across Ethereum and Gnosis chains
+unordered_multichain_mode: true
+
+field_selection:
+  transaction_fields:
+    - "hash"
+
+contracts:
+  - name: GnoToken
+    abi_file_path: src/abis/ERC20.json
+    handler: src/EventHandlers.ts
+    events:
+      - event: "Transfer(address indexed from, address indexed to, uint256 value)"
+
+networks:
+  - id: 1
+    start_block: 0
+    contracts:
+      - name: GnoToken
+        address:
+          - 0x6810e776880C02933D47DB1b9fc05908e5386b96
+  - id: 100
+    start_block: 0
+    contracts:
+      - name: GnoToken
+        address:
+          - 0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb

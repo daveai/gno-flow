@@ -1,0 +1,21 @@
+{
+  "name": "gno-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "codegen": "envio codegen",
+    "dev": "envio dev",
+    "stop": "envio stop",
+    "export": "npx tsx scripts/export-summary.ts"
+  },
+  "dependencies": {
+    "envio": "^2.27.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.3.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "rescript"]
+  }
+}
