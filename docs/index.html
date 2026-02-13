@@ -13,6 +13,7 @@
 
   html {
     overflow-y: scroll;
+    color-scheme: dark;
     -webkit-text-size-adjust: 100%;
   }
 
@@ -75,7 +76,6 @@
   /* ---- Tabs ---- */
   .tabs {
     display: flex;
-    gap: 0;
     border-bottom: 1px solid #1a1a1a;
   }
   .tab {
@@ -108,7 +108,6 @@
 
   .table-scroll {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   table {
@@ -132,6 +131,10 @@
     white-space: nowrap;
   }
   th.r { text-align: right; }
+  th { cursor: pointer; user-select: none; }
+  th::after { content: ''; display: inline-block; width: 8px; margin-left: 3px; font-size: 8px; vertical-align: middle; }
+  th[data-sort="asc"]::after { content: '\25B2'; color: #3e6957; }
+  th[data-sort="desc"]::after { content: '\25BC'; color: #3e6957; }
 
   td {
     padding: 5px 8px;
@@ -233,6 +236,42 @@
   .chain-dot.ethereum { background: #627eea; }
   .chain-dot.gnosis { background: #3e6957; }
 
+  /* Focus styles */
+  .tab:focus-visible, .period-btn:focus-visible, .show-more-btn:focus-visible {
+    outline: 2px solid #3e6957;
+    outline-offset: -2px;
+  }
+  th:focus-visible { outline: 2px solid #3e6957; outline-offset: -2px; }
+  a:focus-visible { outline: 2px solid #5a8fb0; outline-offset: 2px; border-radius: 2px; }
+
+  .period-toggle {
+    display: inline-flex;
+    border: 1px solid #1e1e1e;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 10px 0 2px;
+  }
+  .period-btn {
+    background: none;
+    border: none;
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 5px 14px;
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .period-btn:hover { color: #999; background: #111; }
+  .period-btn.active {
+    color: #e0e0e0;
+    background: #1a2e23;
+  }
+  .period-btn + .period-btn { border-left: 1px solid #1e1e1e; }
+
   /* Show more button */
   .show-more-wrap {
     text-align: center;
@@ -302,38 +341,48 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="header">
+<main class="container">
+  <header class="header">
     <div class="header-left">
-      <span class="title">GNO Flow Monitor</span>
+      <h1 class="title">GNO Flow Monitor</h1>
       <span class="title-tag">ETH / GNO</span>
     </div>
     <div class="meta" id="meta">--</div>
-  </div>
+  </header>
 
-  <div class="tabs">
-    <button class="tab active" data-target="t7">7-Day Flows</button>
-    <button class="tab" data-target="t30">30-Day Flows</button>
-    <button class="tab" data-target="th">Top Holders</button>
-  </div>
+  <nav class="tabs" role="tablist" aria-label="Data views">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="t7" data-target="t7">7-Day Flows</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="t30" data-target="t30">30-Day Flows</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="th" data-target="th">Top Holders</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="tbs" data-target="tbs">Buyers & Sellers</button>
+  </nav>
 
-  <div class="table-wrap active" id="t7">
+  <div class="table-wrap active" id="t7" role="tabpanel" aria-labelledby="t7">
     <div class="state-msg" id="s7">Loading&#8230;</div>
   </div>
-  <div class="table-wrap" id="t30">
+  <div class="table-wrap" id="t30" role="tabpanel" aria-labelledby="t30">
     <div class="state-msg" id="s30">Loading&#8230;</div>
   </div>
-  <div class="table-wrap" id="th">
+  <div class="table-wrap" id="th" role="tabpanel" aria-labelledby="th">
     <div class="state-msg" id="sh">Loading&#8230;</div>
   </div>
-</div>
+  <div class="table-wrap" id="tbs" role="tabpanel" aria-labelledby="tbs">
+    <div class="period-toggle" id="bs-toggle" role="group" aria-label="Time period">
+      <button class="period-btn active" data-period="30d" aria-pressed="true">30 Days</button>
+      <button class="period-btn" data-period="7d" aria-pressed="false">7 Days</button>
+    </div>
+    <div id="bs-content">
+      <div class="state-msg" id="sbs">Loading&#8230;</div>
+    </div>
+  </div>
+</main>
 
 <script>
 (function () {
   var INITIAL_ROWS = 35;
   var EXPLORERS = {
-    ethereum: 'https://eth.blockscout.com/address/',
-    gnosis: 'https://gnosis.blockscout.com/address/'
+    ethereum: 'https://etherscan.io/address/',
+    gnosis: 'https://gnosisscan.io/address/'
   };
 
   function truncAddr(a) {
@@ -380,6 +429,66 @@
     return out;
   }
 
+  function sv(v) { return parseFloat(v) || 0; }
+
+  function showMoreBtn(container) {
+    var btn = container.querySelector('.show-more-btn');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        var extras = container.querySelectorAll('tr[data-extra]');
+        for (var j = 0; j < extras.length; j++) {
+          extras[j].style.display = '';
+          extras[j].removeAttribute('data-extra');
+        }
+        this.parentNode.remove();
+      });
+    }
+  }
+
+  function resolveLabel(addr, labels) {
+    var addrLower = (addr || '').toLowerCase();
+    return (labels && labels[addrLower]) ? labels[addrLower] : '';
+  }
+
+  function labelHtml(label) {
+    return label
+      ? '<span class="label-text">' + esc(label) + '</span>'
+      : '<span class="label-none">--</span>';
+  }
+
+  function rowPrefix(i, addr, label, chains) {
+    var hidden = i >= INITIAL_ROWS ? ' style="display:none" data-extra="1"' : '';
+    return '<tr' + hidden + '>' +
+      '<td class="rank" data-sort="' + (i + 1) + '">' + (i + 1) + '</td>' +
+      '<td class="addr" data-sort="' + esc(addr) + '"><a href="' + explorerUrl(addr, chains) + '" target="_blank" rel="noopener">' + truncAddr(addr) + '</a></td>' +
+      '<td class="label" data-sort="' + esc(label) + '">' + labelHtml(label) + '</td>';
+  }
+
+  function rowSuffix(r) {
+    return '<td class="mono-r count" data-sort="' + r.transfer_count + '">' + fmtNum(r.transfer_count) + '</td>' +
+      '<td class="chains" data-sort="' + esc((r.chains || []).join(',')) + '">' + chainDots(r.chains || []) + '</td>' +
+      '</tr>';
+  }
+
+  function flowCells(inVal, outVal, netVal, inRaw, outRaw, netRaw) {
+    var netCls = parseFloat(netRaw) >= 0 ? 'pos' : 'neg';
+    return '<td class="mono-r f-in" data-sort="' + sv(inRaw) + '">' + (inVal !== '--' ? '+' + esc(inVal) : '--') + '</td>' +
+      '<td class="mono-r f-out" data-sort="' + sv(outRaw) + '">' + (outVal !== '--' ? '\u2212' + esc(outVal) : '--') + '</td>' +
+      '<td class="mono-r f-net ' + netCls + '" data-sort="' + sv(netRaw) + '">' + esc(netVal) + '</td>';
+  }
+
+  function finishTable(h, rows, containerId) {
+    h += '</tbody></table></div>';
+    if (rows.length > INITIAL_ROWS) {
+      h += '<div class="show-more-wrap"><button class="show-more-btn" data-container="' + containerId + '">' +
+        'Show all ' + rows.length + ' addresses</button></div>';
+    }
+    var container = document.getElementById(containerId);
+    container.innerHTML = h;
+    showMoreBtn(container);
+    makeSortable(container);
+  }
+
   function buildTable(rows, containerId, labels) {
     var container = document.getElementById(containerId);
     if (!rows || rows.length === 0) {
@@ -393,66 +502,35 @@
       '<col class="c-count"><col class="c-chains">' +
       '</colgroup>' +
       '<thead><tr>' +
-      '<th class="r">#</th>' +
-      '<th>Address</th>' +
-      '<th>Label</th>' +
-      '<th class="r">Balance</th>' +
-      '<th class="r">In</th>' +
-      '<th class="r">Out</th>' +
-      '<th class="r">Net</th>' +
-      '<th class="r">Txfrs</th>' +
-      '<th>Chain</th>' +
+      '<th class="r" scope="col">#</th>' +
+      '<th scope="col">Address</th>' +
+      '<th scope="col">Label</th>' +
+      '<th class="r" scope="col">Balance</th>' +
+      '<th class="r" scope="col">In</th>' +
+      '<th class="r" scope="col">Out</th>' +
+      '<th class="r" scope="col">Net</th>' +
+      '<th class="r" scope="col">Txfrs</th>' +
+      '<th scope="col">Chain</th>' +
       '</tr></thead><tbody>';
 
     for (var i = 0; i < rows.length; i++) {
       var r = rows[i];
       var addr = r.address || '';
-      var addrLower = addr.toLowerCase();
-      var label = (labels && labels[addrLower]) ? labels[addrLower] : '';
-      var labelHtml = label
-        ? '<span class="label-text">' + esc(label) + '</span>'
-        : '<span class="label-none">--</span>';
-
+      var label = resolveLabel(addr, labels);
       var bal = r.balance ? fmtGno(r.balance) : '--';
-      var inVal = r.inflow ? fmtGno(r.inflow) : '--';
-      var outVal = r.outflow ? fmtGno(r.outflow) : '--';
-      var netVal = fmtGno(r.net_flow, true);
-      var netCls = parseFloat(r.net_flow) >= 0 ? 'pos' : 'neg';
-      var hidden = i >= INITIAL_ROWS ? ' style="display:none" data-extra="1"' : '';
 
-      h += '<tr' + hidden + '>' +
-        '<td class="rank">' + (i + 1) + '</td>' +
-        '<td class="addr"><a href="' + explorerUrl(addr, r.chains) + '" target="_blank" rel="noopener">' + truncAddr(addr) + '</a></td>' +
-        '<td class="label">' + labelHtml + '</td>' +
-        '<td class="mono-r bal">' + esc(bal) + '</td>' +
-        '<td class="mono-r f-in">' + (inVal !== '--' ? '+' + esc(inVal) : '--') + '</td>' +
-        '<td class="mono-r f-out">' + (outVal !== '--' ? '\u2212' + esc(outVal) : '--') + '</td>' +
-        '<td class="mono-r f-net ' + netCls + '">' + esc(netVal) + '</td>' +
-        '<td class="mono-r count">' + fmtNum(r.transfer_count) + '</td>' +
-        '<td class="chains">' + chainDots(r.chains || []) + '</td>' +
-        '</tr>';
+      h += rowPrefix(i, addr, label, r.chains) +
+        '<td class="mono-r bal" data-sort="' + sv(r.balance) + '">' + esc(bal) + '</td>' +
+        flowCells(
+          r.inflow ? fmtGno(r.inflow) : '--',
+          r.outflow ? fmtGno(r.outflow) : '--',
+          fmtGno(r.net_flow, true),
+          r.inflow, r.outflow, r.net_flow
+        ) +
+        rowSuffix(r);
     }
 
-    h += '</tbody></table></div>';
-
-    if (rows.length > INITIAL_ROWS) {
-      h += '<div class="show-more-wrap"><button class="show-more-btn" data-container="' + containerId + '">' +
-        'Show all ' + rows.length + ' addresses</button></div>';
-    }
-
-    container.innerHTML = h;
-
-    var btn = container.querySelector('.show-more-btn');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        var extras = container.querySelectorAll('tr[data-extra]');
-        for (var j = 0; j < extras.length; j++) {
-          extras[j].style.display = '';
-          extras[j].removeAttribute('data-extra');
-        }
-        this.parentNode.remove();
-      });
-    }
+    finishTable(h, rows, containerId);
   }
 
   function buildHoldersTable(rows, containerId, labels) {
@@ -467,55 +545,118 @@
       '<col style="width:auto"><col class="c-count"><col class="c-chains">' +
       '</colgroup>' +
       '<thead><tr>' +
-      '<th class="r">#</th>' +
-      '<th>Address</th>' +
-      '<th>Label</th>' +
-      '<th class="r">Balance</th>' +
-      '<th class="r">Txfrs</th>' +
-      '<th>Chain</th>' +
+      '<th class="r" scope="col">#</th>' +
+      '<th scope="col">Address</th>' +
+      '<th scope="col">Label</th>' +
+      '<th class="r" scope="col">Balance</th>' +
+      '<th class="r" scope="col">Txfrs</th>' +
+      '<th scope="col">Chain</th>' +
       '</tr></thead><tbody>';
 
     for (var i = 0; i < rows.length; i++) {
       var r = rows[i];
       var addr = r.address || '';
-      var addrLower = addr.toLowerCase();
-      var label = (labels && labels[addrLower]) ? labels[addrLower] : '';
-      var labelHtml = label
-        ? '<span class="label-text">' + esc(label) + '</span>'
-        : '<span class="label-none">--</span>';
-
+      var label = resolveLabel(addr, labels);
       var bal = r.balance ? fmtGno(r.balance) : '--';
-      var hidden = i >= INITIAL_ROWS ? ' style="display:none" data-extra="1"' : '';
 
-      h += '<tr' + hidden + '>' +
-        '<td class="rank">' + (i + 1) + '</td>' +
-        '<td class="addr"><a href="' + explorerUrl(addr, r.chains) + '" target="_blank" rel="noopener">' + truncAddr(addr) + '</a></td>' +
-        '<td class="label">' + labelHtml + '</td>' +
-        '<td class="mono-r bal">' + esc(bal) + '</td>' +
-        '<td class="mono-r count">' + fmtNum(r.transfer_count) + '</td>' +
-        '<td class="chains">' + chainDots(r.chains || []) + '</td>' +
-        '</tr>';
+      h += rowPrefix(i, addr, label, r.chains) +
+        '<td class="mono-r bal" data-sort="' + sv(r.balance) + '">' + esc(bal) + '</td>' +
+        rowSuffix(r);
     }
 
-    h += '</tbody></table></div>';
+    finishTable(h, rows, containerId);
+  }
 
-    if (rows.length > INITIAL_ROWS) {
-      h += '<div class="show-more-wrap"><button class="show-more-btn" data-container="' + containerId + '">' +
-        'Show all ' + rows.length + ' addresses</button></div>';
+  function buildBuySellTable(rows, containerId, labels) {
+    var container = document.getElementById(containerId);
+    if (!rows || rows.length === 0) {
+      container.innerHTML = '<div class="state-msg">No data.</div>';
+      return;
+    }
+    var h = '<div class="table-scroll"><table>' +
+      '<colgroup>' +
+      '<col class="c-rank"><col class="c-addr"><col class="c-label">' +
+      '<col class="c-bal"><col class="c-in"><col class="c-out"><col class="c-net">' +
+      '<col class="c-count"><col class="c-chains">' +
+      '</colgroup>' +
+      '<thead><tr>' +
+      '<th class="r" scope="col">#</th>' +
+      '<th scope="col">Address</th>' +
+      '<th scope="col">Label</th>' +
+      '<th class="r" scope="col">Balance</th>' +
+      '<th class="r" scope="col">Buy</th>' +
+      '<th class="r" scope="col">Sell</th>' +
+      '<th class="r" scope="col">Net</th>' +
+      '<th class="r" scope="col">Txfrs</th>' +
+      '<th scope="col">Chain</th>' +
+      '</tr></thead><tbody>';
+
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var addr = r.address || '';
+      var label = resolveLabel(addr, labels);
+      var bal = r.balance ? fmtGno(r.balance) : '--';
+
+      h += rowPrefix(i, addr, label, r.chains) +
+        '<td class="mono-r bal" data-sort="' + sv(r.balance) + '">' + esc(bal) + '</td>' +
+        flowCells(
+          r.buy_volume ? fmtGno(r.buy_volume) : '--',
+          r.sell_volume ? fmtGno(r.sell_volume) : '--',
+          fmtGno(r.net, true),
+          r.buy_volume, r.sell_volume, r.net
+        ) +
+        rowSuffix(r);
     }
 
-    container.innerHTML = h;
+    finishTable(h, rows, containerId);
+  }
 
-    var btn = container.querySelector('.show-more-btn');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        var extras = container.querySelectorAll('tr[data-extra]');
-        for (var j = 0; j < extras.length; j++) {
-          extras[j].style.display = '';
-          extras[j].removeAttribute('data-extra');
-        }
-        this.parentNode.remove();
-      });
+  function makeSortable(container) {
+    var table = container.querySelector('table');
+    if (!table) return;
+    var thead = table.querySelector('thead');
+    var tbody = table.querySelector('tbody');
+    var headers = thead.querySelectorAll('th');
+
+    for (var k = 0; k < headers.length; k++) {
+      (function (colIdx) {
+        headers[colIdx].addEventListener('click', function () {
+          // Show all hidden rows first
+          var extras = tbody.querySelectorAll('tr[data-extra]');
+          for (var j = 0; j < extras.length; j++) {
+            extras[j].style.display = '';
+            extras[j].removeAttribute('data-extra');
+          }
+          var smBtn = container.querySelector('.show-more-btn');
+          if (smBtn) smBtn.parentNode.remove();
+
+          var current = this.getAttribute('data-sort') || '';
+          for (var j = 0; j < headers.length; j++) headers[j].removeAttribute('data-sort');
+          var dir = current === 'desc' ? 'asc' : 'desc';
+          this.setAttribute('data-sort', dir);
+
+          var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+          rows.sort(function (a, b) {
+            var aVal = a.cells[colIdx].getAttribute('data-sort') || '';
+            var bVal = b.cells[colIdx].getAttribute('data-sort') || '';
+            var aNum = parseFloat(aVal);
+            var bNum = parseFloat(bVal);
+            var cmp;
+            if (!isNaN(aNum) && !isNaN(bNum)) {
+              cmp = aNum - bNum;
+            } else {
+              cmp = aVal.localeCompare(bVal);
+            }
+            return dir === 'asc' ? cmp : -cmp;
+          });
+
+          for (var j = 0; j < rows.length; j++) {
+            tbody.appendChild(rows[j]);
+            rows[j].cells[0].textContent = j + 1;
+            rows[j].cells[0].setAttribute('data-sort', j + 1);
+          }
+        });
+      })(k);
     }
   }
 
@@ -523,10 +664,14 @@
   var tabs = document.querySelectorAll('.tab');
   for (var i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', function () {
-      for (var j = 0; j < tabs.length; j++) tabs[j].classList.remove('active');
+      for (var j = 0; j < tabs.length; j++) {
+        tabs[j].classList.remove('active');
+        tabs[j].setAttribute('aria-selected', 'false');
+      }
       var wraps = document.querySelectorAll('.table-wrap');
       for (var j = 0; j < wraps.length; j++) wraps[j].classList.remove('active');
       this.classList.add('active');
+      this.setAttribute('aria-selected', 'true');
       document.getElementById(this.dataset.target).classList.add('active');
     });
   }
@@ -549,10 +694,27 @@
       buildTable(data.top_7d, 't7', labels);
       buildTable(data.top_30d, 't30', labels);
       buildHoldersTable(data.top_holders, 'th', labels);
+
+      // Buyers & Sellers with period toggle
+      var bsData = { '30d': data.buyers_sellers_30d, '7d': data.buyers_sellers_7d };
+      buildBuySellTable(bsData['30d'], 'bs-content', labels);
+
+      var toggleBtns = document.querySelectorAll('#bs-toggle .period-btn');
+      for (var t = 0; t < toggleBtns.length; t++) {
+        toggleBtns[t].addEventListener('click', function () {
+          for (var j = 0; j < toggleBtns.length; j++) {
+            toggleBtns[j].classList.remove('active');
+            toggleBtns[j].setAttribute('aria-pressed', 'false');
+          }
+          this.classList.add('active');
+          this.setAttribute('aria-pressed', 'true');
+          buildBuySellTable(bsData[this.dataset.period], 'bs-content', labels);
+        });
+      }
     })
     .catch(function (err) {
       document.getElementById('meta').textContent = 'Data unavailable';
-      var ids = ['s7', 's30', 'sh'];
+      var ids = ['s7', 's30', 'sh', 'sbs'];
       for (var i = 0; i < ids.length; i++) {
         var el = document.getElementById(ids[i]);
         if (el) { el.className = 'state-msg err'; el.textContent = 'Error: ' + err.message; }

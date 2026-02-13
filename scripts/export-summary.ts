@@ -67,6 +67,47 @@ type FlowEntry = {
   chains: Set<string>;
 };
 
+type BuySellEntry = {
+  buyVolume: bigint;
+  sellVolume: bigint;
+  count: number;
+  chains: Set<string>;
+};
+
+function bigintCompareDesc(a: bigint, b: bigint): number {
+  if (b > a) return 1;
+  if (b < a) return -1;
+  return 0;
+}
+
+function bigintAbsCompareDesc(a: bigint, b: bigint): number {
+  return bigintCompareDesc(
+    a < 0n ? -a : a,
+    b < 0n ? -b : b,
+  );
+}
+
+function classifyAddress(
+  addr: string,
+  labels: Record<string, string>
+): "market" | "infra" | "regular" {
+  const label = labels[addr] || "";
+  if (!label) return "regular";
+  if (/Binance|Coinbase|Bitget|Bithumb|Gate\.io/i.test(label)) return "market";
+  if (/Uniswap|CoW Protocol|CoW Solver|Bancor|1inch|Market Maker/i.test(label)) return "market";
+  if (/^Balancer(:| V3:) Vault/i.test(label)) return "market";
+  if (/^Curve/i.test(label)) return "market";
+  if (
+    /Omni Bridge|GBC Deposit|Aave|Spark|StakeWise|wstETH|Conditional Tokens/i.test(
+      label
+    )
+  )
+    return "infra";
+  if (/Balancer CoW/i.test(label)) return "infra";
+  if (/^Null Address$/i.test(label)) return "infra";
+  return "regular";
+}
+
 async function fetchBalances(
   addresses: string[]
 ): Promise<Map<string, bigint>> {
@@ -153,7 +194,7 @@ async function fetchTopHolders(): Promise<
   }
 
   return [...holderMap.entries()]
-    .sort((a, b) => (b[1].balance > a[1].balance ? 1 : b[1].balance < a[1].balance ? -1 : 0))
+    .sort((a, b) => bigintCompareDesc(a[1].balance, b[1].balance))
     .slice(0, TOP_N)
     .map(([address, entry]) => ({
       address,
@@ -216,9 +257,22 @@ async function main() {
     }
   ).Transfer_aggregate.aggregate.count;
 
+  // Load labels (needed for buy/sell classification)
+  let labels: Record<string, string> = {};
+  try {
+    const raw = JSON.parse(fs.readFileSync(LABELS_PATH, "utf-8"));
+    labels = Object.fromEntries(
+      Object.entries(raw).map(([k, v]) => [k.toLowerCase(), v as string])
+    );
+  } catch {
+    // labels.json not found; proceed without
+  }
+
   // Compute net flows
   const flows7d = new Map<string, FlowEntry>();
   const flows30d = new Map<string, FlowEntry>();
+  const buySell7d = new Map<string, BuySellEntry>();
+  const buySell30d = new Map<string, BuySellEntry>();
   const ZERO = "0x0000000000000000000000000000000000000000";
 
   for (const t of allTransfers) {
@@ -259,16 +313,63 @@ async function main() {
         flows.set(toAddr, entry);
       }
     }
+
+    // Buy/sell classification
+    for (const [cutoff, buySell] of [
+      [cutoff30d, buySell30d],
+      [cutoff7d, buySell7d],
+    ] as [number, Map<string, BuySellEntry>][]) {
+      if (t.blockTimestamp < cutoff) continue;
+
+      const fromClass = classifyAddress(fromAddr, labels);
+      const toClass = classifyAddress(toAddr, labels);
+
+      // Sending TO a market = selling
+      if (
+        toClass === "market" &&
+        fromClass !== "market" &&
+        fromClass !== "infra" &&
+        fromAddr !== ZERO
+      ) {
+        const entry = buySell.get(fromAddr) || {
+          buyVolume: 0n,
+          sellVolume: 0n,
+          count: 0,
+          chains: new Set<string>(),
+        };
+        entry.sellVolume += value;
+        entry.count += 1;
+        entry.chains.add(chainName);
+        buySell.set(fromAddr, entry);
+      }
+
+      // Receiving FROM a market = buying
+      if (
+        fromClass === "market" &&
+        toClass !== "market" &&
+        toClass !== "infra" &&
+        toAddr !== ZERO
+      ) {
+        const entry = buySell.get(toAddr) || {
+          buyVolume: 0n,
+          sellVolume: 0n,
+          count: 0,
+          chains: new Set<string>(),
+        };
+        entry.buyVolume += value;
+        entry.count += 1;
+        entry.chains.add(chainName);
+        buySell.set(toAddr, entry);
+      }
+    }
   }
 
   function buildTop(flows: Map<string, FlowEntry>) {
     return [...flows.entries()]
-      .sort((a, b) => {
-        const net = (e: FlowEntry) => e.inflow - e.outflow;
-        const absA = (() => { const n = net(a[1]); return n < 0n ? -n : n; })();
-        const absB = (() => { const n = net(b[1]); return n < 0n ? -n : n; })();
-        return absB > absA ? 1 : absB < absA ? -1 : 0;
-      })
+      .sort((a, b) => bigintAbsCompareDesc(
+        a[1].inflow - a[1].outflow,
+        b[1].inflow - b[1].outflow,
+      ))
       .slice(0, TOP_N)
       .map(([address, entry]) => ({
         address,
@@ -283,10 +384,32 @@ async function main() {
   const top7d = buildTop(flows7d);
   const top30d = buildTop(flows30d);
 
+  function buildTopBuySell(buySell: Map<string, BuySellEntry>) {
+    return [...buySell.entries()]
+      .sort((a, b) => bigintAbsCompareDesc(
+        a[1].buyVolume - a[1].sellVolume,
+        b[1].buyVolume - b[1].sellVolume,
+      ))
+      .slice(0, TOP_N)
+      .map(([address, entry]) => ({
+        address,
+        buy_volume: bigintToDecimalString(entry.buyVolume),
+        sell_volume: bigintToDecimalString(entry.sellVolume),
+        net: bigintToDecimalString(entry.buyVolume - entry.sellVolume),
+        transfer_count: entry.count,
+        chains: [...entry.chains].sort(),
+      }));
+  }
+
+  const topBuySell7d = buildTopBuySell(buySell7d);
+  const topBuySell30d = buildTopBuySell(buySell30d);
+
   // Collect all unique addresses and fetch balances
   const allAddresses = new Set<string>();
   for (const r of top7d) allAddresses.add(r.address);
   for (const r of top30d) allAddresses.add(r.address);
+  for (const r of topBuySell7d) allAddresses.add(r.address);
+  for (const r of topBuySell30d) allAddresses.add(r.address);
 
   console.log(`Fetching balances for ${allAddresses.size} addresses...`);
   const balances = await fetchBalances([...allAddresses]);
@@ -295,30 +418,19 @@ async function main() {
   const topHolders = await fetchTopHolders();
 
   // Add balance to rows
-  function addBalances(
-    rows: { address: string; inflow: string; outflow: string; net_flow: string; transfer_count: number; chains: string[] }[]
-  ) {
+  function addBalances<T extends { address: string }>(rows: T[]) {
     return rows.map((r) => ({
       ...r,
       balance: bigintToDecimalString(balances.get(r.address) || 0n),
     }));
   }
 
-  // Load labels
-  let labels: Record<string, string> = {};
-  try {
-    const raw = JSON.parse(fs.readFileSync(LABELS_PATH, "utf-8"));
-    labels = Object.fromEntries(
-      Object.entries(raw).map(([k, v]) => [k.toLowerCase(), v as string])
-    );
-  } catch {
-    // labels.json not found; proceed without
-  }
-
   const summary = {
     top_7d: addBalances(top7d),
     top_30d: addBalances(top30d),
     top_holders: topHolders,
+    buyers_sellers_7d: addBalances(topBuySell7d),
+    buyers_sellers_30d: addBalances(topBuySell30d),
     labels,
     synced_at: new Date().toISOString(),
     total_transfers: totalTransfers,
@@ -327,7 +439,9 @@ async function main() {
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(summary, null, 2) + "\n");
   console.log(
     `Exported: ${summary.top_7d.length} addresses (7d), ` +
-      `${summary.top_30d.length} (30d), ${totalTransfers} total transfers`
+      `${summary.top_30d.length} (30d), ` +
+      `${summary.buyers_sellers_30d.length} buyers/sellers, ` +
+      `${totalTransfers} total transfers`
   );
 }
 
