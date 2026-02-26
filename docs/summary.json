@@ -1,59 +1,59 @@
 {
   "top_7d": [
     {
-      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
-      "inflow": "3167.816347085123308565",
+      "address": "0x509ad7278a2f6530bc24590c83e93faf8fd46e99",
+      "inflow": "5582.887804024027759485",
       "outflow": "0",
-      "net_flow": "3167.816347085123308565",
-      "transfer_count": 901,
+      "net_flow": "5582.887804024027759485",
+      "transfer_count": 3,
       "chains": [
         "gnosis"
       ],
-      "balance": "3167.816347085123308565"
+      "balance": "83094.471827382828548724"
+    },
+    {
+      "address": "0x46f2da8a69a150390a87db78e7aad8572c564963",
+      "inflow": "5164.615912586862570446",
+      "outflow": "7056.800542175426238117",
+      "net_flow": "-1892.184629588563667671",
+      "transfer_count": 13944,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "1394.937062542245761447"
+    },
+    {
+      "address": "0xba1333333333a1ba1108e8412f11850a5c319ba9",
+      "inflow": "145.548773171144327356",
+      "outflow": "1507.610850063729980671",
+      "net_flow": "-1362.062076892585653315",
+      "transfer_count": 2839,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "168.707253901209583725"
+    },
+    {
+      "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
+      "inflow": "1692.385624011988549306",
+      "outflow": "406.215857983128324949",
+      "net_flow": "1286.169766028860224357",
+      "transfer_count": 77,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "1394304.918736471304106358"
     },
     {
       "address": "0x0b98057ea310f4d31f2a452b414647007d1645d9",
-      "inflow": "7010.59481631534375",
-      "outflow": "10106.49548828",
-      "net_flow": "-3095.90067196465625",
-      "transfer_count": 161,
+      "inflow": "7152.14788389465625",
+      "outflow": "8391.27757600853125",
+      "net_flow": "-1239.129692113875",
+      "transfer_count": 158,
       "chains": [
         "gnosis"
       ],
-      "balance": "312084.178145255625000001"
-    },
-    {
-      "address": "0x10e4597ff93cbee194f4879f8f1d54a370db6969",
-      "inflow": "2776.67576507490483337",
-      "outflow": "0",
-      "net_flow": "2776.67576507490483337",
-      "transfer_count": 2,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "38262.320477327613225938"
-    },
-    {
-      "address": "0x41bed30955e6368d6e4bfbde195f96cd882913ab",
-      "inflow": "710.287405883588166376",
-      "outflow": "2776.67576507490483337",
-      "net_flow": "-2066.388359191316666994",
-      "transfer_count": 369,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xa1fa064a85266e2ca82dee5c5ccec84df445760e",
-      "inflow": "1301.768536607994049012",
-      "outflow": "3325.539429119264146458",
-      "net_flow": "-2023.770892511270097446",
-      "transfer_count": 1363,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "73765.580116524931872768"
+      "balance": "306140.017060178687500001"
     },
     {
       "address": "0x91c35c71387691a516f4289066be51cc56f839f6",
@@ -67,39 +67,15 @@
       "balance": "1203.35208711571875"
     },
     {
-      "address": "0xade38ad7cd00c20cdf60afdd679be32f87b7d802",
-      "inflow": "410.386557912726299292",
-      "outflow": "1484.12999443036009354",
-      "net_flow": "-1073.743436517633794248",
-      "transfer_count": 7,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x46f2da8a69a150390a87db78e7aad8572c564963",
-      "inflow": "7789.819582911426928988",
-      "outflow": "6797.109002350476855727",
-      "net_flow": "992.710580560950073261",
-      "transfer_count": 18575,
+      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
+      "inflow": "5152.93189861126639183",
+      "outflow": "4215.150778459945778766",
+      "net_flow": "937.781120151320613064",
+      "transfer_count": 1673,
       "chains": [
         "gnosis"
       ],
-      "balance": "1626.150672353617326291"
-    },
-    {
-      "address": "0xba1333333333a1ba1108e8412f11850a5c319ba9",
-      "inflow": "1921.166760022242093821",
-      "outflow": "975.527760987771316918",
-      "net_flow": "945.638999034470776903",
-      "transfer_count": 7554,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "1536.546625956677530567"
+      "balance": "937.781120151320613064"
     },
     {
       "address": "0x54e191b01aa9c1f61aa5c3bce8d00956f32d3e71",
@@ -111,17 +87,6 @@
         "gnosis"
       ],
       "balance": "1803.887456533812176311"
-    },
-    {
-      "address": "0xc4485b4f6699661844c6e54cae7513a6d25575aa",
-      "inflow": "0",
-      "outflow": "870",
-      "net_flow": "-870",
-      "transfer_count": 1,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "9.580129870306778324"
     },
     {
       "address": "0xa13399c30485625fa12d468b4326a2dc536ffa48",
@@ -136,25 +101,47 @@
     },
     {
       "address": "0x5112d584a1c72fc250176b57aeba5ffbbb287d8f",
-      "inflow": "7201.701786067125",
+      "inflow": "6003.40523848653125",
       "outflow": "6750",
-      "net_flow": "451.701786067125",
+      "net_flow": "-746.59476151346875",
       "transfer_count": 2,
       "chains": [
         "gnosis"
       ],
-      "balance": "1703.167084826875"
+      "balance": "7706.57232331340625"
     },
     {
-      "address": "0xf7878463070a013a58f547b2b08df47a1fb91744",
-      "inflow": "1234.919768953348978144",
-      "outflow": "844.600142019951496569",
-      "net_flow": "390.319626933397481575",
-      "transfer_count": 317,
+      "address": "0x28c6c06298d514db089934071355e5743bf21d60",
+      "inflow": "1260.436403026156637709",
+      "outflow": "1918.75332535",
+      "net_flow": "-658.316922323843362291",
+      "transfer_count": 105,
       "chains": [
         "ethereum"
       ],
-      "balance": "637.225276430414411724"
+      "balance": "813.802128543797393569"
+    },
+    {
+      "address": "0xcdf50be9061086e2ecfe6e4a1bf9164d43568eec",
+      "inflow": "0",
+      "outflow": "403.019020641381655131",
+      "net_flow": "-403.019020641381655131",
+      "transfer_count": 4933,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "582.993872337502303544"
+    },
+    {
+      "address": "0xd2a98d0376d3e2a45a38537773c10f8aa8a5cfb2",
+      "inflow": "304.9505614361",
+      "outflow": "679.63786618",
+      "net_flow": "-374.6873047439",
+      "transfer_count": 41,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "4270.825906796287598984"
     },
     {
       "address": "0xa527643e7bcb549130548a330e5d5fac76a18683",
@@ -179,15 +166,15 @@
       "balance": "349.612820212527321713"
     },
     {
-      "address": "0xd2a98d0376d3e2a45a38537773c10f8aa8a5cfb2",
-      "inflow": "1104.27404873",
-      "outflow": "778.66614349",
-      "net_flow": "325.60790524",
-      "transfer_count": 44,
+      "address": "0x8678f58ac6c4748b5289d0db70e627eef395dead",
+      "inflow": "0",
+      "outflow": "309.498843249589898327",
+      "net_flow": "-309.498843249589898327",
+      "transfer_count": 4,
       "chains": [
-        "ethereum"
+        "gnosis"
       ],
-      "balance": "4615.836076550187598984"
+      "balance": "0"
     },
     {
       "address": "0xf26eca531c8b5f6ad7e2c2cdf17ce93005bae875",
@@ -201,171 +188,114 @@
       "balance": "0"
     },
     {
-      "address": "0x7fbe62d931f9ea32ca9b8779285e092bbf343b70",
-      "inflow": "431.065692341828210968",
-      "outflow": "686.932190335759216166",
-      "net_flow": "-255.866497993931005198",
-      "transfer_count": 4,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "153.095215498777821945"
-    },
-    {
-      "address": "0x28c6c06298d514db089934071355e5743bf21d60",
-      "inflow": "2385.830455314332524078",
-      "outflow": "2148.45236931",
-      "net_flow": "237.378086004332524078",
-      "transfer_count": 112,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "1469.418542655861416843"
-    },
-    {
-      "address": "0xcdf50be9061086e2ecfe6e4a1bf9164d43568eec",
+      "address": "0x596d8c3422d299222e455349f890f59265a00a97",
       "inflow": "0",
-      "outflow": "197.586333175816810627",
-      "net_flow": "-197.586333175816810627",
-      "transfer_count": 2466,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "788.426559803067148048"
-    },
-    {
-      "address": "0x09b263f43111a818dd11ac347eca697a4ceefa56",
-      "inflow": "1263.039081197783003508",
-      "outflow": "1453.3967158494156256",
-      "net_flow": "-190.357634651632622092",
-      "transfer_count": 1238,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "2.245248729534640548"
-    },
-    {
-      "address": "0xe99aa41497710d3d5b636be03a23cc721201e93f",
-      "inflow": "0",
-      "outflow": "151.433113551215065901",
-      "net_flow": "-151.433113551215065901",
+      "outflow": "205.749748451204343233",
+      "net_flow": "-205.749748451204343233",
       "transfer_count": 1,
       "chains": [
-        "ethereum"
+        "gnosis"
       ],
       "balance": "0"
     },
     {
-      "address": "0x568a29dfb227afeb2edbf3b0b7cffc4644e0e9a4",
-      "inflow": "151.433113551215065901",
-      "outflow": "0",
-      "net_flow": "151.433113551215065901",
-      "transfer_count": 1,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "151.433113551215065901"
-    },
-    {
-      "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
-      "inflow": "2624.420093076743198504",
-      "outflow": "2477.89686215388611773",
-      "net_flow": "146.523230922857080774",
-      "transfer_count": 70,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "1393241.174540742642153992"
-    },
-    {
-      "address": "0x5ab6e91413d2d7cfe451d5f23a3a66d6c38c1706",
-      "inflow": "143.2810961",
-      "outflow": "0",
-      "net_flow": "143.2810961",
-      "transfer_count": 1,
+      "address": "0xa1fa064a85266e2ca82dee5c5ccec84df445760e",
+      "inflow": "616.747018200851408833",
+      "outflow": "417.193378205586212501",
+      "net_flow": "199.553639995265196332",
+      "transfer_count": 1231,
       "chains": [
         "gnosis"
       ],
-      "balance": "143.2810961"
+      "balance": "73630.82298295640964023"
     },
     {
-      "address": "0xf720797f186b867a2fb71a0e44d1ff7c4d3d2a29",
-      "inflow": "0.5714824387796352",
-      "outflow": "143.2810961",
-      "net_flow": "-142.7096136612203648",
+      "address": "0x8b7efb25028c6db03e6c602a7c3c864fda1537f0",
+      "inflow": "205.749748451204343233",
+      "outflow": "20",
+      "net_flow": "185.749748451204343233",
       "transfer_count": 2,
       "chains": [
         "gnosis"
       ],
-      "balance": "0.571482447568256704"
+      "balance": "185.749748451204343233"
     },
     {
-      "address": "0xc0aa8d234db068fee7454fb5dc8f696611cbe6d9",
-      "inflow": "427.970234876662683004",
-      "outflow": "568.745",
-      "net_flow": "-140.774765123337316996",
-      "transfer_count": 1760,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "96.530458225633787308"
-    },
-    {
-      "address": "0xba12222222228d8ba445958a75a0704d566bf2c8",
-      "inflow": "852.369799315185017989",
-      "outflow": "723.25737170460259972",
-      "net_flow": "129.112427610582418269",
-      "transfer_count": 11663,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "3102.854014009200997979"
-    },
-    {
-      "address": "0x24814e2d11cdf985b70277550258a9cfbcf48f13",
+      "address": "0x4fb312915b779b1339388e14b6d079741ca83128",
       "inflow": "0",
-      "outflow": "117.012642983206348883",
-      "net_flow": "-117.012642983206348883",
-      "transfer_count": 1,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x3323d8c4519b7743fe6802aee5d217f628b460ef",
-      "inflow": "117.012642983206348883",
-      "outflow": "0",
-      "net_flow": "117.012642983206348883",
-      "transfer_count": 1,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "117.012642983206348883"
-    },
-    {
-      "address": "0x1135faea43d4ed8d4cfeb708e574405b55b71d50",
-      "inflow": "0",
-      "outflow": "114.891173271815255188",
-      "net_flow": "-114.891173271815255188",
+      "outflow": "170",
+      "net_flow": "-170",
       "transfer_count": 1,
       "chains": [
         "ethereum"
       ],
-      "balance": "0"
+      "balance": "906"
     },
     {
-      "address": "0x47755b2156dbcae325864c0ed2c201f94c52a482",
-      "inflow": "116.649045000000002177",
-      "outflow": "12.542310000000000096",
-      "net_flow": "104.106735000000002081",
-      "transfer_count": 189,
+      "address": "0xf7878463070a013a58f547b2b08df47a1fb91744",
+      "inflow": "754.464246585983438519",
+      "outflow": "913.640043446260903858",
+      "net_flow": "-159.175796860277465339",
+      "transfer_count": 312,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "251.511354937124381195"
+    },
+    {
+      "address": "0xb333bee90bffeb69ea3d8d7418ebb485d2a7795a",
+      "inflow": "153.62392386",
+      "outflow": "0",
+      "net_flow": "153.62392386",
+      "transfer_count": 1,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "153.62392386"
+    },
+    {
+      "address": "0x41bed30955e6368d6e4bfbde195f96cd882913ab",
+      "inflow": "0",
+      "outflow": "148.992462053130027888",
+      "net_flow": "-148.992462053130027888",
+      "transfer_count": 1,
       "chains": [
         "gnosis"
       ],
-      "balance": "104.106735000000002081"
+      "balance": "0"
+    },
+    {
+      "address": "0x10e4597ff93cbee194f4879f8f1d54a370db6969",
+      "inflow": "148.992462053130027888",
+      "outflow": "0",
+      "net_flow": "148.992462053130027888",
+      "transfer_count": 1,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "38262.320477327613225938"
+    },
+    {
+      "address": "0x3e2cf8cf86b7a03c74ca61bc921c6f154a2aad93",
+      "inflow": "0",
+      "outflow": "148.45312012",
+      "net_flow": "-148.45312012",
+      "transfer_count": 24,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "1406.290583920591459391"
+    },
+    {
+      "address": "0x3323d8c4519b7743fe6802aee5d217f628b460ef",
+      "inflow": "0.04834429271875",
+      "outflow": "117",
+      "net_flow": "-116.95165570728125",
+      "transfer_count": 10,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0.060987275925098883"
     },
     {
       "address": "0x9c4d5d18c5512a72e4b886dc701d3200d2bd9f61",
@@ -379,15 +309,15 @@
       "balance": "0"
     },
     {
-      "address": "0x1d425d5c3fe77f5f91f5582f2a98d4a94cb0549b",
-      "inflow": "0",
-      "outflow": "100",
-      "net_flow": "-100",
-      "transfer_count": 1,
+      "address": "0x47755b2156dbcae325864c0ed2c201f94c52a482",
+      "inflow": "116.649045000000002177",
+      "outflow": "17.638492500000000133",
+      "net_flow": "99.010552500000002044",
+      "transfer_count": 269,
       "chains": [
-        "ethereum"
+        "gnosis"
       ],
-      "balance": "0"
+      "balance": "99.010552500000002044"
     },
     {
       "address": "0x2fc6961b83192cf237dc6f6bdb387ab3134bcc5e",
@@ -401,37 +331,49 @@
       "balance": "1251.353855220198536177"
     },
     {
-      "address": "0x7dafba1d69f6c01ae7567ffd7b046ca03b706f83",
-      "inflow": "0",
-      "outflow": "97.98907655",
-      "net_flow": "-97.98907655",
-      "transfer_count": 1,
+      "address": "0x7fbe62d931f9ea32ca9b8779285e092bbf343b70",
+      "inflow": "160.509139205818757192",
+      "outflow": "257.677216768423070892",
+      "net_flow": "-97.1680775626043137",
+      "transfer_count": 3,
       "chains": [
         "ethereum"
       ],
-      "balance": "6512.6921987514"
+      "balance": "313.604354704596579137"
     },
     {
-      "address": "0xa15108471a025532a7e8b9c6b8dacea1815cd1df",
-      "inflow": "0",
-      "outflow": "90.827788791942372555",
-      "net_flow": "-90.827788791942372555",
-      "transfer_count": 1,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x796b8c7ab4e5ce68df4ad409bea1e755ccadc42a",
-      "inflow": "89.786712967802381917",
-      "outflow": "0",
-      "net_flow": "89.786712967802381917",
-      "transfer_count": 2,
+      "address": "0xf470828d85ba6e6d92a039ff8a7c574997fce162",
+      "inflow": "0.099536707252460208",
+      "outflow": "96",
+      "net_flow": "-95.900463292747539792",
+      "transfer_count": 3,
       "chains": [
         "gnosis"
       ],
-      "balance": "101.019747608156316306"
+      "balance": "5.355257503551907965"
+    },
+    {
+      "address": "0x09b263f43111a818dd11ac347eca697a4ceefa56",
+      "inflow": "1254.452408196892392885",
+      "outflow": "1347.3400642459193735",
+      "net_flow": "-92.887656049026980615",
+      "transfer_count": 1061,
+      "chains": [
+        "ethereum",
+        "gnosis"
+      ],
+      "balance": "86.552235466311471583"
+    },
+    {
+      "address": "0x796b8c7ab4e5ce68df4ad409bea1e755ccadc42a",
+      "inflow": "89.795898901235190333",
+      "outflow": "0",
+      "net_flow": "89.795898901235190333",
+      "transfer_count": 3,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "101.028933541589124722"
     },
     {
       "address": "0x98adef6f2ac8572ec48965509d69a8dd5e8bba9d",
@@ -445,93 +387,48 @@
       "balance": "185.98907335"
     },
     {
-      "address": "0x71663f74490673706d7b8860b7d02b7c76160bae",
-      "inflow": "203.998838974987846232",
-      "outflow": "115.263804776601299348",
-      "net_flow": "88.735034198386546884",
-      "transfer_count": 1562,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "1881.777513775365335908"
-    },
-    {
       "address": "0x13778c37105236821430420c691c0c6a492fff91",
-      "inflow": "0.231267526240543104",
+      "inflow": "0.430528572909454208",
       "outflow": "70.78",
-      "net_flow": "-70.548732473759456896",
-      "transfer_count": 2,
+      "net_flow": "-70.349471427090545792",
+      "transfer_count": 3,
       "chains": [
         "gnosis"
       ],
-      "balance": "10.458304583191062316"
+      "balance": "10.65756562985997342"
     },
     {
       "address": "0x21a31ee1afc51d94c2efccaa2092ad1028285549",
-      "inflow": "364.940082",
-      "outflow": "425.22848758",
-      "net_flow": "-60.28840558",
-      "transfer_count": 22,
+      "inflow": "472.05462079",
+      "outflow": "404.6216208",
+      "net_flow": "67.43299999",
+      "transfer_count": 21,
       "chains": [
         "ethereum"
       ],
-      "balance": "183.11911242"
+      "balance": "364.3658"
     },
     {
-      "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
-      "inflow": "0",
-      "outflow": "59.9443397",
-      "net_flow": "-59.9443397",
+      "address": "0xd7f99b1cda3eecf6b6eaa8a61ed21d061e745400",
+      "inflow": "60.430462821358663882",
+      "outflow": "126.412489853880477866",
+      "net_flow": "-65.982027032521813984",
+      "transfer_count": 99,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "970.074356623933824291"
+    },
+    {
+      "address": "0x5bdf85216ec1e38d6458c870992a69e38e03f7ef",
+      "inflow": "119.70226",
+      "outflow": "60.33652792",
+      "net_flow": "59.36573208",
       "transfer_count": 5,
       "chains": [
         "ethereum"
       ],
-      "balance": "757.260842505863806836"
-    },
-    {
-      "address": "0x3faca60011c2a73d6403f019ef25d6bcaf44dc35",
-      "inflow": "586.594980436296037468",
-      "outflow": "646.11497389820506644",
-      "net_flow": "-59.519993461909028972",
-      "transfer_count": 3,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x1a9d699aee3a56ca49d0cc3b542ae3a37885a3e1",
-      "inflow": "0",
-      "outflow": "59.347",
-      "net_flow": "-59.347",
-      "transfer_count": 2,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "54.330240715469131192"
-    },
-    {
-      "address": "0x3e2cf8cf86b7a03c74ca61bc921c6f154a2aad93",
-      "inflow": "0",
-      "outflow": "51.9110465",
-      "net_flow": "-51.9110465",
-      "transfer_count": 3,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "1554.743704040591459391"
-    },
-    {
-      "address": "0xc75d34ab3664e02bc459609224d709c929dee723",
-      "inflow": "16.809755272222143217",
-      "outflow": "68.605144811994928255",
-      "net_flow": "-51.795389539772785038",
-      "transfer_count": 114,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0.001"
+      "balance": "667.520206205331"
     },
     {
       "address": "0x51e7bcbeb2b963d81b3074b7f786e39c4173b265",
@@ -545,24 +442,125 @@
       "balance": "50.176776649620130197"
     },
     {
-      "address": "0xa03400e098f4421b34a3a44a1b4e571419517687",
-      "inflow": "59.347",
-      "outflow": "19.9837",
-      "net_flow": "39.3633",
+      "address": "0xeb3bd6893a5ca146e0ec1cdf17209b66572e1c2c",
+      "inflow": "0",
+      "outflow": "47.008254576986759263",
+      "net_flow": "-47.008254576986759263",
+      "transfer_count": 2,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+      "inflow": "820.08734290586634483",
+      "outflow": "780.636189832034215448",
+      "net_flow": "39.451153073832129382",
+      "transfer_count": 8434,
+      "chains": [
+        "ethereum",
+        "gnosis"
+      ],
+      "balance": "3057.816325556928030425"
+    },
+    {
+      "address": "0x4b4406ed8659d03423490d8b62a1639206da0a7a",
+      "inflow": "253.095018466048257047",
+      "outflow": "214.711729844183103246",
+      "net_flow": "38.383288621865153801",
+      "transfer_count": 76,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "987.68714525449585792"
+    },
+    {
+      "address": "0x4354a28c70e33032619df646b6dd0d39d0c75916",
+      "inflow": "47.166224946269243602",
+      "outflow": "85.407788133788487204",
+      "net_flow": "-38.241563187519243602",
       "transfer_count": 4,
+      "chains": [
+        "ethereum",
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xc0aa8d234db068fee7454fb5dc8f696611cbe6d9",
+      "inflow": "414.687698130019491",
+      "outflow": "380.108",
+      "net_flow": "34.579698130019491",
+      "transfer_count": 1252,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "217.46238451387384939"
+    },
+    {
+      "address": "0xb4669b10d923c2d141f2eccf382bbe06ceedf82b",
+      "inflow": "66.95526425",
+      "outflow": "98.1324897",
+      "net_flow": "-31.17722545",
+      "transfer_count": 20,
       "chains": [
         "ethereum"
       ],
-      "balance": "66.66983080921165378"
+      "balance": "0"
+    },
+    {
+      "address": "0xceafdd6bc0bef976fdcd1112955828e00543c0ce",
+      "inflow": "7.936337717025668638",
+      "outflow": "39.054261401104926041",
+      "net_flow": "-31.117923684079257403",
+      "transfer_count": 1709,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "1310.292634355676289046"
+    },
+    {
+      "address": "0x2aa6845f7e84b2cc1619c823bf4f6b04ec733f2c",
+      "inflow": "518.821671089089954802",
+      "outflow": "549.9",
+      "net_flow": "-31.078328910910045198",
+      "transfer_count": 194,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "1.412614925260738632"
+    },
+    {
+      "address": "0xff606f6b843678c6b2591076ea741d292254fb87",
+      "inflow": "30.879053666507659555",
+      "outflow": "0",
+      "net_flow": "30.879053666507659555",
+      "transfer_count": 3,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "41.35039027038527121"
+    },
+    {
+      "address": "0xb91e21e475dbd1b4a4f16887b4e2389a687975d6",
+      "inflow": "0",
+      "outflow": "30.632031390135187091",
+      "net_flow": "-30.632031390135187091",
+      "transfer_count": 1,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
     }
   ],
   "top_30d": [
     {
       "address": "0x10e4597ff93cbee194f4879f8f1d54a370db6969",
-      "inflow": "20082.612733746033214287",
+      "inflow": "16954.22160357671006124",
       "outflow": "568.78",
-      "net_flow": "19513.832733746033214287",
-      "transfer_count": 13,
+      "net_flow": "16385.44160357671006124",
+      "transfer_count": 12,
       "chains": [
         "gnosis"
       ],
@@ -570,25 +568,47 @@
     },
     {
       "address": "0x0b98057ea310f4d31f2a452b414647007d1645d9",
-      "inflow": "10021.31957260346875",
-      "outflow": "18023.21364151415625",
-      "net_flow": "-8001.8940689106875",
-      "transfer_count": 760,
+      "inflow": "9637.26178090003125",
+      "outflow": "23881.41171396659375",
+      "net_flow": "-14244.1499330665625",
+      "transfer_count": 768,
       "chains": [
         "gnosis"
       ],
-      "balance": "312084.178145255625000001"
+      "balance": "306140.017060178687500001"
     },
     {
       "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
-      "inflow": "14059.781033415942122933",
-      "outflow": "7476.306473705591510343",
-      "net_flow": "6583.47455971035061259",
-      "transfer_count": 386,
+      "inflow": "14050.945615459407772326",
+      "outflow": "7262.610694455917812105",
+      "net_flow": "6788.334921003489960221",
+      "transfer_count": 396,
       "chains": [
         "ethereum"
       ],
-      "balance": "1393241.174540742642153992"
+      "balance": "1394304.918736471304106358"
+    },
+    {
+      "address": "0x5112d584a1c72fc250176b57aeba5ffbbb287d8f",
+      "inflow": "13205.10702455365625",
+      "outflow": "6750",
+      "net_flow": "6455.10702455365625",
+      "transfer_count": 3,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "7706.57232331340625"
+    },
+    {
+      "address": "0x509ad7278a2f6530bc24590c83e93faf8fd46e99",
+      "inflow": "5582.887804024027759485",
+      "outflow": "0",
+      "net_flow": "5582.887804024027759485",
+      "transfer_count": 3,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "83094.471827382828548724"
     },
     {
       "address": "0xad30a962a03bc7134cc1545bea7318c8e472ff97",
@@ -614,47 +634,36 @@
     },
     {
       "address": "0x46f2da8a69a150390a87db78e7aad8572c564963",
-      "inflow": "23972.733991028975872143",
-      "outflow": "28152.418419406335048205",
-      "net_flow": "-4179.684428377359176062",
-      "transfer_count": 95785,
+      "inflow": "25137.211031834413878886",
+      "outflow": "28465.104206694091780756",
+      "net_flow": "-3327.89317485967790187",
+      "transfer_count": 95359,
       "chains": [
         "gnosis"
       ],
-      "balance": "1626.150672353617326291"
-    },
-    {
-      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
-      "inflow": "3167.816347085123308565",
-      "outflow": "0",
-      "net_flow": "3167.816347085123308565",
-      "transfer_count": 901,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "3167.816347085123308565"
+      "balance": "1394.937062542245761447"
     },
     {
       "address": "0x28c6c06298d514db089934071355e5743bf21d60",
-      "inflow": "9780.920078193331864445",
-      "outflow": "12112.98383286",
-      "net_flow": "-2332.063754666668135555",
-      "transfer_count": 614,
+      "inflow": "10608.583096682562508763",
+      "outflow": "12963.17335899",
+      "net_flow": "-2354.590262307437491237",
+      "transfer_count": 651,
       "chains": [
         "ethereum"
       ],
-      "balance": "1469.418542655861416843"
+      "balance": "813.802128543797393569"
     },
     {
-      "address": "0x41bed30955e6368d6e4bfbde195f96cd882913ab",
-      "inflow": "18141.282505622439955781",
-      "outflow": "20082.612733746033214287",
-      "net_flow": "-1941.330228123593258506",
-      "transfer_count": 6924,
+      "address": "0x3e2cf8cf86b7a03c74ca61bc921c6f154a2aad93",
+      "inflow": "3200",
+      "outflow": "4587.56087472",
+      "net_flow": "-1387.56087472",
+      "transfer_count": 57,
       "chains": [
-        "gnosis"
+        "ethereum"
       ],
-      "balance": "0"
+      "balance": "1406.290583920591459391"
     },
     {
       "address": "0xf977814e90da44bfa03b6295a0616a897441acec",
@@ -668,26 +677,15 @@
       "balance": "21371.578"
     },
     {
-      "address": "0x3e2cf8cf86b7a03c74ca61bc921c6f154a2aad93",
-      "inflow": "3200",
-      "outflow": "4439.1077546",
-      "net_flow": "-1239.1077546",
-      "transfer_count": 33,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "1554.743704040591459391"
-    },
-    {
       "address": "0x78cee97c23560279909c0215e084db293f036774",
       "inflow": "0",
-      "outflow": "1190",
-      "net_flow": "-1190",
-      "transfer_count": 110,
+      "outflow": "1194.287983485673220781",
+      "net_flow": "-1194.287983485673220781",
+      "transfer_count": 111,
       "chains": [
         "ethereum"
       ],
-      "balance": "4.287983485673220781"
+      "balance": "0"
     },
     {
       "address": "0x91c35c71387691a516f4289066be51cc56f839f6",
@@ -724,6 +722,51 @@
       "balance": "1251.353855220198536177"
     },
     {
+      "address": "0xcdf50be9061086e2ecfe6e4a1bf9164d43568eec",
+      "inflow": "0",
+      "outflow": "1030.418466125163851537",
+      "net_flow": "-1030.418466125163851537",
+      "transfer_count": 13512,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "582.993872337502303544"
+    },
+    {
+      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
+      "inflow": "5152.93189861126639183",
+      "outflow": "4215.150778459945778766",
+      "net_flow": "937.781120151320613064",
+      "transfer_count": 1673,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "937.781120151320613064"
+    },
+    {
+      "address": "0xf7878463070a013a58f547b2b08df47a1fb91744",
+      "inflow": "10640.825473470401186526",
+      "outflow": "11574.809936652186897067",
+      "net_flow": "-933.984463181785710541",
+      "transfer_count": 1687,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "251.511354937124381195"
+    },
+    {
+      "address": "0xba1333333333a1ba1108e8412f11850a5c319ba9",
+      "inflow": "16688.535979982154650439",
+      "outflow": "17607.155369455742581325",
+      "net_flow": "-918.619389473587930886",
+      "transfer_count": 85148,
+      "chains": [
+        "ethereum",
+        "gnosis"
+      ],
+      "balance": "168.707253901209583725"
+    },
+    {
       "address": "0x54e191b01aa9c1f61aa5c3bce8d00956f32d3e71",
       "inflow": "0",
       "outflow": "900",
@@ -758,36 +801,36 @@
     },
     {
       "address": "0x5671b0b8ac13dc7813d36b99c21c53f6cd376a14",
-      "inflow": "1974.528873865010429378",
-      "outflow": "2802.230488364315646644",
-      "net_flow": "-827.701614499305217266",
-      "transfer_count": 37819,
+      "inflow": "1964.830064605544626529",
+      "outflow": "2797.077784689466066337",
+      "net_flow": "-832.247720083921439808",
+      "transfer_count": 36222,
       "chains": [
         "gnosis"
       ],
       "balance": "997.809310657116934988"
     },
     {
-      "address": "0xcdf50be9061086e2ecfe6e4a1bf9164d43568eec",
-      "inflow": "0",
-      "outflow": "824.980598533854225793",
-      "net_flow": "-824.980598533854225793",
-      "transfer_count": 11045,
+      "address": "0x4b4406ed8659d03423490d8b62a1639206da0a7a",
+      "inflow": "3570.663296909424053501",
+      "outflow": "4216.428891649185670822",
+      "net_flow": "-645.765594739761617321",
+      "transfer_count": 513,
       "chains": [
         "gnosis"
       ],
-      "balance": "788.426559803067148048"
+      "balance": "987.68714525449585792"
     },
     {
-      "address": "0x4b4406ed8659d03423490d8b62a1639206da0a7a",
-      "inflow": "3937.312153430483713951",
-      "outflow": "4684.26977050513191132",
-      "net_flow": "-746.957617074648197369",
-      "transfer_count": 533,
+      "address": "0x41bed30955e6368d6e4bfbde195f96cd882913ab",
+      "inflow": "16345.763628642185100819",
+      "outflow": "16954.22160357671006124",
+      "net_flow": "-608.457974934524960421",
+      "transfer_count": 5930,
       "chains": [
         "gnosis"
       ],
-      "balance": "949.964958874958518234"
+      "balance": "0"
     },
     {
       "address": "0x237dee529a47750becdfa8a59a1d766e3e7b5f91",
@@ -801,15 +844,15 @@
       "balance": "0"
     },
     {
-      "address": "0xf7878463070a013a58f547b2b08df47a1fb91744",
-      "inflow": "10854.970872629367849804",
-      "outflow": "11454.429964655657589107",
-      "net_flow": "-599.459092026289739303",
-      "transfer_count": 1626,
+      "address": "0xa1fa064a85266e2ca82dee5c5ccec84df445760e",
+      "inflow": "9683.329275392657323845",
+      "outflow": "10267.400697842013128235",
+      "net_flow": "-584.07142244935580439",
+      "transfer_count": 16442,
       "chains": [
-        "ethereum"
+        "gnosis"
       ],
-      "balance": "637.225276430414411724"
+      "balance": "73630.82298295640964023"
     },
     {
       "address": "0x27264e2ff75b3c022c840868dcd936870df22eba",
@@ -824,48 +867,14 @@
     },
     {
       "address": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43",
-      "inflow": "984.025261854085074494",
-      "outflow": "1444.8013644357",
-      "net_flow": "-460.776102581614925506",
-      "transfer_count": 138,
+      "inflow": "1051.803639916735074494",
+      "outflow": "1514.8264526657",
+      "net_flow": "-463.022812748964925506",
+      "transfer_count": 143,
       "chains": [
         "ethereum"
       ],
-      "balance": "1545.874525284462494394"
-    },
-    {
-      "address": "0x5112d584a1c72fc250176b57aeba5ffbbb287d8f",
-      "inflow": "7201.701786067125",
-      "outflow": "6750",
-      "net_flow": "451.701786067125",
-      "transfer_count": 2,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "1703.167084826875"
-    },
-    {
-      "address": "0xba1333333333a1ba1108e8412f11850a5c319ba9",
-      "inflow": "16847.046497078642553053",
-      "outflow": "16402.523580841992135061",
-      "net_flow": "444.522916236650417992",
-      "transfer_count": 87601,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "1536.546625956677530567"
-    },
-    {
-      "address": "0xa1fa064a85266e2ca82dee5c5ccec84df445760e",
-      "inflow": "9839.330033299857469966",
-      "outflow": "10274.059849015270161719",
-      "net_flow": "-434.729815715412691753",
-      "transfer_count": 16241,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "73765.580116524931872768"
+      "balance": "1551.878936377112494394"
     },
     {
       "address": "0xb9012e211b0f725004d6562ebbf591cba52bf710",
@@ -877,17 +886,6 @@
         "gnosis"
       ],
       "balance": "0"
-    },
-    {
-      "address": "0x849d52316331967b6ff1198e5e32a0eb168d039d",
-      "inflow": "0",
-      "outflow": "372",
-      "net_flow": "-372",
-      "transfer_count": 2,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "396314.27982812860392374"
     },
     {
       "address": "0xa527643e7bcb549130548a330e5d5fac76a18683",
@@ -912,17 +910,6 @@
       "balance": "349.612820212527321713"
     },
     {
-      "address": "0x2821ca19f08f1e056305b8c7b9284bc71478c5a3",
-      "inflow": "87.76257940434332722",
-      "outflow": "421.024912109864279812",
-      "net_flow": "-333.262332705520952592",
-      "transfer_count": 2,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
       "address": "0xb09d280865428ea74d1f12c28f032656c8524533",
       "inflow": "323.378",
       "outflow": "0",
@@ -932,17 +919,6 @@
         "gnosis"
       ],
       "balance": "323.378"
-    },
-    {
-      "address": "0x8678f58ac6c4748b5289d0db70e627eef395dead",
-      "inflow": "309.498843249589898327",
-      "outflow": "0",
-      "net_flow": "309.498843249589898327",
-      "transfer_count": 4,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "309.498843249589898327"
     },
     {
       "address": "0x264fb7ad1b70d4f03aa538a9e8d6e56bfddf9a80",
@@ -957,15 +933,15 @@
       "balance": "297.611479505990764921"
     },
     {
-      "address": "0xdfd5293d8e347dfe59e90efd55b2956a1343963d",
-      "inflow": "2777.18476788",
-      "outflow": "3036.54370299",
-      "net_flow": "-259.35893511",
-      "transfer_count": 140,
+      "address": "0xd2a98d0376d3e2a45a38537773c10f8aa8a5cfb2",
+      "inflow": "2312.7289298261",
+      "outflow": "2596.53996614",
+      "net_flow": "-283.8110363139",
+      "transfer_count": 158,
       "chains": [
         "ethereum"
       ],
-      "balance": "216.50928469"
+      "balance": "4270.825906796287598984"
     },
     {
       "address": "0x5077fac8400a061ff779dd3b41d56a4edb70d0c0",
@@ -1002,25 +978,47 @@
     },
     {
       "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
-      "inflow": "107.0981",
-      "outflow": "354.83593209",
-      "net_flow": "-247.73783209",
-      "transfer_count": 15,
+      "inflow": "461.65539209",
+      "outflow": "694.79488209",
+      "net_flow": "-233.13949",
+      "transfer_count": 22,
       "chains": [
         "ethereum"
       ],
-      "balance": "757.260842505863806836"
+      "balance": "771.859184595863806836"
     },
     {
-      "address": "0x21a31ee1afc51d94c2efccaa2092ad1028285549",
-      "inflow": "3616.49740276",
-      "outflow": "3822.95310612",
-      "net_flow": "-206.45570336",
-      "transfer_count": 143,
+      "address": "0x849d52316331967b6ff1198e5e32a0eb168d039d",
+      "inflow": "0",
+      "outflow": "214",
+      "net_flow": "-214",
+      "transfer_count": 1,
       "chains": [
         "ethereum"
       ],
-      "balance": "183.11911242"
+      "balance": "396314.27982812860392374"
+    },
+    {
+      "address": "0x7fbe62d931f9ea32ca9b8779285e092bbf343b70",
+      "inflow": "2805.690411223481018772",
+      "outflow": "2592.715972892233276212",
+      "net_flow": "212.97443833124774256",
+      "transfer_count": 21,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "313.604354704596579137"
+    },
+    {
+      "address": "0x596d8c3422d299222e455349f890f59265a00a97",
+      "inflow": "0",
+      "outflow": "205.749748451204343233",
+      "net_flow": "-205.749748451204343233",
+      "transfer_count": 1,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
     },
     {
       "address": "0xbd54e86be49ab801ff75039c29f10deacc86850c",
@@ -1034,17 +1032,6 @@
       "balance": "206.673205977115400794"
     },
     {
-      "address": "0xb5814811dc4fc2ac127a1f8fb708460bf9fad619",
-      "inflow": "287.163363967614418789",
-      "outflow": "488.985211152932949617",
-      "net_flow": "-201.821847185318530828",
-      "transfer_count": 1483,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "535.668441402633791854"
-    },
-    {
       "address": "0x8caa50a05a6b78f1170c32dd5f43c969542c505a",
       "inflow": "0",
       "outflow": "195.540422781540752951",
@@ -1056,6 +1043,28 @@
       "balance": "0"
     },
     {
+      "address": "0x8b7efb25028c6db03e6c602a7c3c864fda1537f0",
+      "inflow": "205.749748451204343233",
+      "outflow": "20",
+      "net_flow": "185.749748451204343233",
+      "transfer_count": 2,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "185.749748451204343233"
+    },
+    {
+      "address": "0xb5814811dc4fc2ac127a1f8fb708460bf9fad619",
+      "inflow": "304.555226936401629813",
+      "outflow": "484.788593698833370454",
+      "net_flow": "-180.233366762431740641",
+      "transfer_count": 1466,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "547.830464510762980081"
+    },
+    {
       "address": "0x29fbcc224d6417f35a894132c7dace7d6787f139",
       "inflow": "0",
       "outflow": "171.627551713370793337",
@@ -1065,6 +1074,17 @@
         "ethereum"
       ],
       "balance": "0"
+    },
+    {
+      "address": "0x4fb312915b779b1339388e14b6d079741ca83128",
+      "inflow": "0",
+      "outflow": "170",
+      "net_flow": "-170",
+      "transfer_count": 1,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "906"
     },
     {
       "address": "0x75e22e54293135f650c4bc9bcbcda58e4decb94c",
@@ -1087,28 +1107,6 @@
         "gnosis"
       ],
       "balance": "166.660001302541687938"
-    },
-    {
-      "address": "0xd7f99b1cda3eecf6b6eaa8a61ed21d061e745400",
-      "inflow": "334.895056171434946687",
-      "outflow": "499.207847339248907264",
-      "net_flow": "-164.312791167813960577",
-      "transfer_count": 405,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "997.313120444954721593"
-    },
-    {
-      "address": "0x002b79f631b0d43d5252ca0f6581a5d447ab8010",
-      "inflow": "158",
-      "outflow": "0",
-      "net_flow": "158",
-      "transfer_count": 1,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "158"
     }
   ],
   "top_holders": [
@@ -1122,8 +1120,8 @@
     },
     {
       "address": "0x88ad09518695c6c3712ac10a214be5109a655671",
-      "balance": "1393241.174540742642153992",
-      "transfer_count": 18385,
+      "balance": "1394304.918736471304106358",
+      "transfer_count": 18424,
       "chains": [
         "ethereum"
       ]
@@ -1154,8 +1152,8 @@
     },
     {
       "address": "0x0b98057ea310f4d31f2a452b414647007d1645d9",
-      "balance": "312084.178145255625000001",
-      "transfer_count": 72413,
+      "balance": "306140.017060178687500001",
+      "transfer_count": 72490,
       "chains": [
         "gnosis"
       ]
@@ -1170,16 +1168,16 @@
     },
     {
       "address": "0x509ad7278a2f6530bc24590c83e93faf8fd46e99",
-      "balance": "77511.584023358800789239",
-      "transfer_count": 12,
+      "balance": "83094.471827382828548724",
+      "transfer_count": 15,
       "chains": [
         "gnosis"
       ]
     },
     {
       "address": "0xa1fa064a85266e2ca82dee5c5ccec84df445760e",
-      "balance": "73765.580116524931872768",
-      "transfer_count": 143788,
+      "balance": "73630.82298295640964023",
+      "transfer_count": 144294,
       "chains": [
         "gnosis"
       ]
@@ -1307,8 +1305,8 @@
     },
     {
       "address": "0xd2dd7b597fd2435b6db61ddf48544fd931e6869f",
-      "balance": "12348.8486650653",
-      "transfer_count": 127,
+      "balance": "12358.6891091053",
+      "transfer_count": 130,
       "chains": [
         "ethereum"
       ]
@@ -1343,6 +1341,14 @@
       "transfer_count": 21,
       "chains": [
         "ethereum"
+      ]
+    },
+    {
+      "address": "0x5112d584a1c72fc250176b57aeba5ffbbb287d8f",
+      "balance": "7706.57232331340625",
+      "transfer_count": 54,
+      "chains": [
+        "gnosis"
       ]
     },
     {
@@ -1426,14 +1432,6 @@
       ]
     },
     {
-      "address": "0xd2a98d0376d3e2a45a38537773c10f8aa8a5cfb2",
-      "balance": "4615.836076550187598984",
-      "transfer_count": 1205,
-      "chains": [
-        "ethereum"
-      ]
-    },
-    {
       "address": "0x6750adbb477d0310f395da2ad93abe4b9bfd1c87",
       "balance": "4379.46684601",
       "transfer_count": 23,
@@ -1445,6 +1443,14 @@
       "address": "0x1772c67c482d697a552c3068cbc265eabb990306",
       "balance": "4341.226508079288371025",
       "transfer_count": 4,
+      "chains": [
+        "ethereum"
+      ]
+    },
+    {
+      "address": "0xd2a98d0376d3e2a45a38537773c10f8aa8a5cfb2",
+      "balance": "4270.825906796287598984",
+      "transfer_count": 1232,
       "chains": [
         "ethereum"
       ]
@@ -1498,17 +1504,9 @@
       ]
     },
     {
-      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
-      "balance": "3167.816347085123308565",
-      "transfer_count": 901,
-      "chains": [
-        "gnosis"
-      ]
-    },
-    {
       "address": "0xba12222222228d8ba445958a75a0704d566bf2c8",
-      "balance": "3102.854014009200997979",
-      "transfer_count": 1738674,
+      "balance": "3057.816325556928030425",
+      "transfer_count": 1741311,
       "chains": [
         "ethereum",
         "gnosis"
@@ -1518,37 +1516,25 @@
   "buyers_sellers_7d": [
     {
       "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
-      "buy_volume": "3167.816347085123308565",
+      "buy_volume": "5152.93189861126639183",
       "sell_volume": "0",
-      "net": "3167.816347085123308565",
-      "transfer_count": 901,
+      "net": "5152.93189861126639183",
+      "transfer_count": 1672,
       "chains": [
         "gnosis"
       ],
-      "balance": "3167.816347085123308565"
+      "balance": "937.781120151320613064"
     },
     {
-      "address": "0xe837770fc477522360cf620bc15ba34cb9e4a6d0",
-      "buy_volume": "500",
-      "sell_volume": "1780",
-      "net": "-1280",
-      "transfer_count": 13,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xade38ad7cd00c20cdf60afdd679be32f87b7d802",
-      "buy_volume": "0",
-      "sell_volume": "1073.743436517633794248",
-      "net": "-1073.743436517633794248",
-      "transfer_count": 5,
+      "address": "0x509ad7278a2f6530bc24590c83e93faf8fd46e99",
+      "buy_volume": "1367.737025564081980719",
+      "sell_volume": "0",
+      "net": "1367.737025564081980719",
+      "transfer_count": 2,
       "chains": [
         "gnosis"
       ],
-      "balance": "0"
+      "balance": "83094.471827382828548724"
     },
     {
       "address": "0x54e191b01aa9c1f61aa5c3bce8d00956f32d3e71",
@@ -1562,56 +1548,11 @@
       "balance": "1803.887456533812176311"
     },
     {
-      "address": "0x7ea366e151b3e4f22333bc94fb7933d06f9ee98a",
-      "buy_volume": "0",
-      "sell_volume": "800",
-      "net": "-800",
-      "transfer_count": 1,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x41bed30955e6368d6e4bfbde195f96cd882913ab",
-      "buy_volume": "710.287405883588166376",
-      "sell_volume": "0",
-      "net": "710.287405883588166376",
-      "transfer_count": 367,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x3faca60011c2a73d6403f019ef25d6bcaf44dc35",
-      "buy_volume": "0",
-      "sell_volume": "646.11497389820506644",
-      "net": "-646.11497389820506644",
-      "transfer_count": 2,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x212be33e51e727d4efba612653dddceb57c109ca",
-      "buy_volume": "633.014060413925851044",
-      "sell_volume": "0",
-      "net": "633.014060413925851044",
-      "transfer_count": 43,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
       "address": "0x6a000f20005980200259b80c5102003040001068",
-      "buy_volume": "625.958936413029657273",
-      "sell_volume": "5.233096687557560621",
-      "net": "620.725839725472096652",
-      "transfer_count": 611,
+      "buy_volume": "386.087139939181292339",
+      "sell_volume": "71.801496197087686293",
+      "net": "314.285643742093606046",
+      "transfer_count": 520,
       "chains": [
         "ethereum",
         "gnosis"
@@ -1619,45 +1560,45 @@
       "balance": "0.000000000000000002"
     },
     {
-      "address": "0xfdff0b569f14af593d446e51b3e42f502124ac85",
-      "buy_volume": "323.888723312332041119",
-      "sell_volume": "806.338044748395341768",
-      "net": "-482.449321436063300649",
-      "transfer_count": 93,
+      "address": "0x8678f58ac6c4748b5289d0db70e627eef395dead",
+      "buy_volume": "0",
+      "sell_volume": "309.498843249589898327",
+      "net": "-309.498843249589898327",
+      "transfer_count": 4,
       "chains": [
-        "ethereum",
         "gnosis"
       ],
-      "balance": "153.89752964442022899"
+      "balance": "0"
     },
     {
       "address": "0xc0aa8d234db068fee7454fb5dc8f696611cbe6d9",
       "buy_volume": "0",
-      "sell_volume": "468.745",
-      "net": "-468.745",
-      "transfer_count": 1458,
+      "sell_volume": "280.108",
+      "net": "-280.108",
+      "transfer_count": 1005,
       "chains": [
         "gnosis"
       ],
-      "balance": "96.530458225633787308"
+      "balance": "217.46238451387384939"
     },
     {
-      "address": "0x74fc507e669beba4cd6c22d60826ff00efa67a61",
-      "buy_volume": "22.936896855490775064",
-      "sell_volume": "468.040292422744195378",
-      "net": "-445.103395567253420314",
+      "address": "0xfdff0b569f14af593d446e51b3e42f502124ac85",
+      "buy_volume": "778.40562734802567101",
+      "sell_volume": "994.797369710615822479",
+      "net": "-216.391742362590151469",
       "transfer_count": 143,
       "chains": [
+        "ethereum",
         "gnosis"
       ],
-      "balance": "0.000016203588017938"
+      "balance": "138.905411118100274269"
     },
     {
       "address": "0x150819f32b6e5957b4116ec8df419e50b15bb679",
       "buy_volume": "0",
-      "sell_volume": "324.35045",
-      "net": "-324.35045",
-      "transfer_count": 4,
+      "sell_volume": "208.43687",
+      "net": "-208.43687",
+      "transfer_count": 3,
       "chains": [
         "ethereum"
       ],
@@ -1665,132 +1606,32 @@
     },
     {
       "address": "0xb75af6aac0b676857bd1e0953849593b25f6adec",
-      "buy_volume": "303.6108",
+      "buy_volume": "201.6593",
       "sell_volume": "0",
-      "net": "303.6108",
-      "transfer_count": 2,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "11.946196936779557094"
-    },
-    {
-      "address": "0x192b3147d30fe60bef09e6a50abf1140e889c5ad",
-      "buy_volume": "0",
-      "sell_volume": "300",
-      "net": "-300",
-      "transfer_count": 4,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xee845948e6806d12e966137caa07d49bbe632fe3",
-      "buy_volume": "33.99855608",
-      "sell_volume": "304.79121608",
-      "net": "-270.79266",
-      "transfer_count": 12,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x073e81d92bd8b39562106819d12346240606f04a",
-      "buy_volume": "0",
-      "sell_volume": "198.911958180287012774",
-      "net": "-198.911958180287012774",
-      "transfer_count": 308,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0.000000000000000001"
-    },
-    {
-      "address": "0x09b263f43111a818dd11ac347eca697a4ceefa56",
-      "buy_volume": "690.846881197783003508",
-      "sell_volume": "881.2045158494156256",
-      "net": "-190.357634651632622092",
-      "transfer_count": 1230,
-      "chains": [
-        "ethereum",
-        "gnosis"
-      ],
-      "balance": "2.245248729534640548"
-    },
-    {
-      "address": "0x97a8353dc9c4f35eb686cb1bbb5d49eec0491b3e",
-      "buy_volume": "28.462613718167293609",
-      "sell_volume": "218.176236670905136143",
-      "net": "-189.713622952737842534",
-      "transfer_count": 89,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xbe751e75a8c8c82e6f1e616156c5028a00fc0019",
-      "buy_volume": "180.053835105563805556",
-      "sell_volume": "0",
-      "net": "180.053835105563805556",
-      "transfer_count": 5,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0.033835105563805556"
-    },
-    {
-      "address": "0x2b9c259afb27b5d24563e99b9d6ccda8cf2f077d",
-      "buy_volume": "0",
-      "sell_volume": "161.5831989202789",
-      "net": "-161.5831989202789",
+      "net": "201.6593",
       "transfer_count": 1,
       "chains": [
         "ethereum"
       ],
-      "balance": "0"
+      "balance": "3.605496936779557094"
     },
     {
       "address": "0xefb37bd3a9ed2f768bf6f79d0379fe7f9be50f49",
       "buy_volume": "0",
-      "sell_volume": "141.079839447018300346",
-      "net": "-141.079839447018300346",
-      "transfer_count": 75,
+      "sell_volume": "199.510650576690143623",
+      "net": "-199.510650576690143623",
+      "transfer_count": 138,
       "chains": [
         "gnosis"
       ],
       "balance": "0.000000000000002214"
     },
     {
-      "address": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
-      "buy_volume": "143.126380379440747393",
-      "sell_volume": "8.799996783359815252",
-      "net": "134.326383596080932141",
-      "transfer_count": 88,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xe6ed270d9e446d80a93682c90edbeaf5ccb19915",
-      "buy_volume": "0",
-      "sell_volume": "114.891173271815255188",
-      "net": "-114.891173271815255188",
-      "transfer_count": 4,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xcb00bc413eba31ece4d3b782e06271ed49685d5b",
-      "buy_volume": "156.106073",
-      "sell_volume": "45.019251290845820999",
-      "net": "111.086821709154179001",
-      "transfer_count": 15,
+      "address": "0x04ce218ead72401702dd5f3e56cedb7d2d477777",
+      "buy_volume": "139.704819748433381846",
+      "sell_volume": "0",
+      "net": "139.704819748433381846",
+      "transfer_count": 3,
       "chains": [
         "ethereum",
         "gnosis"
@@ -1798,24 +1639,79 @@
       "balance": "0"
     },
     {
-      "address": "0x893ee5a10aec49aae0ae6e5a78ff79e2069f82e8",
+      "address": "0x7cfa94b7e492ab788bbac4d0ccc3c88d01c5a41d",
       "buy_volume": "0",
-      "sell_volume": "100",
-      "net": "-100",
-      "transfer_count": 1,
+      "sell_volume": "139.704819007424416091",
+      "net": "-139.704819007424416091",
+      "transfer_count": 3,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0x073e81d92bd8b39562106819d12346240606f04a",
+      "buy_volume": "0",
+      "sell_volume": "131.451591095760741583",
+      "net": "-131.451591095760741583",
+      "transfer_count": 174,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0.000000000000000001"
+    },
+    {
+      "address": "0x58e1885adc33d07b1afc16f11463163a1a28cced",
+      "buy_volume": "126.98199",
+      "sell_volume": "0",
+      "net": "126.98199",
+      "transfer_count": 3,
       "chains": [
         "ethereum"
       ],
       "balance": "0"
     },
     {
-      "address": "0xc9d3538f65e50faa16264eac68df464e48d518a8",
-      "buy_volume": "0",
-      "sell_volume": "100",
-      "net": "-100",
-      "transfer_count": 1,
+      "address": "0x8782163068c7cd74d2510768a61135c1e4eb07b3",
+      "buy_volume": "228.29972209",
+      "sell_volume": "354.55729209",
+      "net": "-126.25757",
+      "transfer_count": 5,
       "chains": [
         "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xfed2399b20011af1fc985d5354f12cbc57ed48f9",
+      "buy_volume": "0",
+      "sell_volume": "116.79226",
+      "net": "-116.79226",
+      "transfer_count": 2,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xee845948e6806d12e966137caa07d49bbe632fe3",
+      "buy_volume": "340.34502856",
+      "sell_volume": "456.20971856",
+      "net": "-115.86469",
+      "transfer_count": 19,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
+      "buy_volume": "117.765537192435146334",
+      "sell_volume": "5.80067392044615244",
+      "net": "111.964863271988993894",
+      "transfer_count": 85,
+      "chains": [
+        "gnosis"
       ],
       "balance": "0"
     },
@@ -1832,36 +1728,37 @@
     },
     {
       "address": "0x7fbe62d931f9ea32ca9b8779285e092bbf343b70",
-      "buy_volume": "431.065692341828210968",
-      "sell_volume": "525.348991415480316166",
-      "net": "-94.283299073652105198",
+      "buy_volume": "160.509139205818757192",
+      "sell_volume": "257.677216768423070892",
+      "net": "-97.1680775626043137",
       "transfer_count": 3,
       "chains": [
         "ethereum"
       ],
-      "balance": "153.095215498777821945"
+      "balance": "313.604354704596579137"
     },
     {
-      "address": "0x2374da9a66e6321612fb9cca715359db1ae5ee8a",
-      "buy_volume": "93.6924",
-      "sell_volume": "0",
-      "net": "93.6924",
-      "transfer_count": 1,
+      "address": "0x09b263f43111a818dd11ac347eca697a4ceefa56",
+      "buy_volume": "675.821508196892392885",
+      "sell_volume": "768.7091642459193735",
+      "net": "-92.887656049026980615",
+      "transfer_count": 1053,
       "chains": [
-        "ethereum"
+        "ethereum",
+        "gnosis"
       ],
-      "balance": "0.000534468776293836"
+      "balance": "86.552235466311471583"
     },
     {
-      "address": "0xa15108471a025532a7e8b9c6b8dacea1815cd1df",
+      "address": "0xa247d18aad3ab69176f84df97aeacd27c6853499",
       "buy_volume": "0",
-      "sell_volume": "90.827788791942372555",
-      "net": "-90.827788791942372555",
+      "sell_volume": "90",
+      "net": "-90",
       "transfer_count": 1,
       "chains": [
-        "ethereum"
+        "gnosis"
       ],
-      "balance": "0"
+      "balance": "8"
     },
     {
       "address": "0x98adef6f2ac8572ec48965509d69a8dd5e8bba9d",
@@ -1875,87 +1772,77 @@
       "balance": "185.98907335"
     },
     {
-      "address": "0x71663f74490673706d7b8860b7d02b7c76160bae",
-      "buy_volume": "203.998838974987846232",
-      "sell_volume": "115.263804776601299348",
-      "net": "88.735034198386546884",
-      "transfer_count": 1562,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "1881.777513775365335908"
-    },
-    {
-      "address": "0x4e187d91c39686099feaf2b57003bf524a2787c6",
-      "buy_volume": "0",
-      "sell_volume": "84.759488177010188818",
-      "net": "-84.759488177010188818",
-      "transfer_count": 9,
+      "address": "0x5e1f62dac767b0491e3ce72469c217365d5b48cc",
+      "buy_volume": "82.599112338006244299",
+      "sell_volume": "0",
+      "net": "82.599112338006244299",
+      "transfer_count": 17,
       "chains": [
         "ethereum"
       ],
       "balance": "0"
-    },
-    {
-      "address": "0x0668b4d29bf7609d0e8dccd81061801728e64623",
-      "buy_volume": "82.1587897",
-      "sell_volume": "0",
-      "net": "82.1587897",
-      "transfer_count": 6,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x8243c2021fb560f92b027aca8999b5069873c341",
-      "buy_volume": "72.4767",
-      "sell_volume": "0",
-      "net": "72.4767",
-      "transfer_count": 5,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "14.56567882443824553"
-    },
-    {
-      "address": "0xb70d29decca758bb72cd2967a989782f3acad3e6",
-      "buy_volume": "63.842761983285967234",
-      "sell_volume": "0",
-      "net": "63.842761983285967234",
-      "transfer_count": 1,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0.322658"
     },
     {
       "address": "0xe578184bc88eb48485bba23a37b5509578d2ae38",
-      "buy_volume": "0.495445452794827585",
-      "sell_volume": "54.700841861703189573",
-      "net": "-54.205396408908361988",
-      "transfer_count": 126,
+      "buy_volume": "1.197752547261562752",
+      "sell_volume": "80.947678432600524391",
+      "net": "-79.749925885338961639",
+      "transfer_count": 182,
       "chains": [
         "gnosis"
       ],
       "balance": "0.000000000000000002"
     },
     {
-      "address": "0xd060332db2e54cf9e093d02e26b56ac309f9561f",
+      "address": "0xcb00bc413eba31ece4d3b782e06271ed49685d5b",
+      "buy_volume": "144.122692779801236066",
+      "sell_volume": "71.019830132670103001",
+      "net": "73.102862647131133065",
+      "transfer_count": 19,
+      "chains": [
+        "ethereum",
+        "gnosis"
+      ],
+      "balance": "19.9983"
+    },
+    {
+      "address": "0x061682c42bcded4b455dbd0b3398b3d8dfd9036f",
       "buy_volume": "0",
-      "sell_volume": "53",
-      "net": "-53",
+      "sell_volume": "64.958867170724630231",
+      "net": "-64.958867170724630231",
       "transfer_count": 7,
       "chains": [
-        "gnosis"
+        "ethereum"
       ],
       "balance": "0"
     },
     {
-      "address": "0x8610d7f8380b26c9368cd11e35d1a4276a9ccea7",
+      "address": "0x4e187d91c39686099feaf2b57003bf524a2787c6",
       "buy_volume": "0",
-      "sell_volume": "52.98210574",
-      "net": "-52.98210574",
+      "sell_volume": "58.253426017684254589",
+      "net": "-58.253426017684254589",
+      "transfer_count": 8,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xc10ee9031f2a0b84766a86b55a8d90f357910fb4",
+      "buy_volume": "29.005404591599932536",
+      "sell_volume": "83.314707227462926842",
+      "net": "-54.309302635862994306",
+      "transfer_count": 101,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0.000000000000000001"
+    },
+    {
+      "address": "0x1e4e88a130b8c4dba97c5ad2cfd628b816a70831",
+      "buy_volume": "0",
+      "sell_volume": "51.9111",
+      "net": "-51.9111",
       "transfer_count": 1,
       "chains": [
         "ethereum"
@@ -1965,8 +1852,8 @@
     {
       "address": "0x41fbba5cb38d22b2d80606406944cedd7c97f6f9",
       "buy_volume": "0",
-      "sell_volume": "51.9110465",
-      "net": "-51.9110465",
+      "sell_volume": "51.91100155",
+      "net": "-51.91100155",
       "transfer_count": 1,
       "chains": [
         "ethereum"
@@ -1974,37 +1861,26 @@
       "balance": "0"
     },
     {
-      "address": "0xc75d34ab3664e02bc459609224d709c929dee723",
-      "buy_volume": "16.809755272222143217",
-      "sell_volume": "68.605144811994928255",
-      "net": "-51.795389539772785038",
-      "transfer_count": 114,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "0.001"
-    },
-    {
-      "address": "0x04ce218ead72401702dd5f3e56cedb7d2d477777",
-      "buy_volume": "50.655877741008965755",
+      "address": "0x0668b4d29bf7609d0e8dccd81061801728e64623",
+      "buy_volume": "50.98156425",
       "sell_volume": "0",
-      "net": "50.655877741008965755",
-      "transfer_count": 1,
+      "net": "50.98156425",
+      "transfer_count": 3,
       "chains": [
-        "gnosis"
+        "ethereum"
       ],
       "balance": "0"
     },
     {
-      "address": "0x7cfa94b7e492ab788bbac4d0ccc3c88d01c5a41d",
+      "address": "0x6fa29d5893776020531474d54688f649ed1be3e9",
       "buy_volume": "0",
-      "sell_volume": "50.655877",
-      "net": "-50.655877",
+      "sell_volume": "50.681965551426679533",
+      "net": "-50.681965551426679533",
       "transfer_count": 1,
       "chains": [
-        "gnosis"
+        "ethereum"
       ],
-      "balance": "0"
+      "balance": "0.000000002085330277"
     },
     {
       "address": "0x15684866235a21d0a076628247a959455f3c0e21",
@@ -2018,33 +1894,11 @@
       "balance": "0"
     },
     {
-      "address": "0x5e1f62dac767b0491e3ce72469c217365d5b48cc",
-      "buy_volume": "42.647363015462279886",
+      "address": "0x57f106a65e9a5c7c4ee1fb333f6fe2f98d36b3cf",
+      "buy_volume": "39.90255874",
       "sell_volume": "0",
-      "net": "42.647363015462279886",
-      "transfer_count": 8,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xb46a0f71fded6ceb00b1c9278e0ac7e22c242df5",
-      "buy_volume": "42.99868406",
-      "sell_volume": "84.99461406",
-      "net": "-41.99593",
-      "transfer_count": 5,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0x58e1885adc33d07b1afc16f11463163a1a28cced",
-      "buy_volume": "38.9904",
-      "sell_volume": "0",
-      "net": "38.9904",
-      "transfer_count": 2,
+      "net": "39.90255874",
+      "transfer_count": 1,
       "chains": [
         "ethereum"
       ],
@@ -2052,10 +1906,10 @@
     },
     {
       "address": "0x600fa684a9010c436de0bbf564ac3b5f5859de2c",
-      "buy_volume": "20.2249",
-      "sell_volume": "58.4512",
+      "buy_volume": "83.2201",
+      "sell_volume": "121.4464",
       "net": "-38.2263",
-      "transfer_count": 3,
+      "transfer_count": 5,
       "chains": [
         "ethereum"
       ],
@@ -2071,15 +1925,158 @@
         "ethereum"
       ],
       "balance": "0"
+    },
+    {
+      "address": "0x2aa6845f7e84b2cc1619c823bf4f6b04ec733f2c",
+      "buy_volume": "518.821671089089954802",
+      "sell_volume": "549.9",
+      "net": "-31.078328910910045198",
+      "transfer_count": 194,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "1.412614925260738632"
+    },
+    {
+      "address": "0x51d9365c60b2c63d5a77442ec7f54d0ba33995f5",
+      "buy_volume": "3.438708659795379358",
+      "sell_volume": "34.078406673604982338",
+      "net": "-30.63969801380960298",
+      "transfer_count": 123,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xe1c45d2cc95c94ec9871e799c88426007d553b00",
+      "buy_volume": "27.68571493",
+      "sell_volume": "57.88137493",
+      "net": "-30.19566",
+      "transfer_count": 4,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xdde43beb13469a50f6edbec30faaa7af2b130837",
+      "buy_volume": "0",
+      "sell_volume": "30.003714351636029636",
+      "net": "-30.003714351636029636",
+      "transfer_count": 1,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0x8243c2021fb560f92b027aca8999b5069873c341",
+      "buy_volume": "43.9871",
+      "sell_volume": "14",
+      "net": "29.9871",
+      "transfer_count": 4,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "15.066437367884218981"
+    },
+    {
+      "address": "0xac0b12b117be013016c80d2714cfa373c4f65c34",
+      "buy_volume": "0",
+      "sell_volume": "25.734010855982908373",
+      "net": "-25.734010855982908373",
+      "transfer_count": 1,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xbe918b43e3ab4d21184d823d775a52a61a3c4941",
+      "buy_volume": "25.07089",
+      "sell_volume": "0",
+      "net": "25.07089",
+      "transfer_count": 1,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "25.07089"
+    },
+    {
+      "address": "0x6cd1077413475269cfb46c55bfcb0825afd03b48",
+      "buy_volume": "0.128151735826212343",
+      "sell_volume": "24.313198741016677601",
+      "net": "-24.185047005190465258",
+      "transfer_count": 408,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0x353d34e80733ba2a6056953ca3ec73ae56a851bc",
+      "buy_volume": "0",
+      "sell_volume": "22.482302326521011068",
+      "net": "-22.482302326521011068",
+      "transfer_count": 2,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "4.847779401400414717"
+    },
+    {
+      "address": "0xaeab1411371b39b139452df06bea0de1b7e0f2f1",
+      "buy_volume": "126.755702973383291543",
+      "sell_volume": "148.057001503152780298",
+      "net": "-21.301298529769488755",
+      "transfer_count": 6235,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0x8b7efb25028c6db03e6c602a7c3c864fda1537f0",
+      "buy_volume": "0",
+      "sell_volume": "20",
+      "net": "-20",
+      "transfer_count": 1,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "185.749748451204343233"
+    },
+    {
+      "address": "0xda74c47b560028cc864e2c7c064e1b05e994d41c",
+      "buy_volume": "19.316182477229352256",
+      "sell_volume": "0",
+      "net": "19.316182477229352256",
+      "transfer_count": 50,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "21.724417163950227648"
+    },
+    {
+      "address": "0xdc949e168631246d05d0b12c6ac9573d2e8da185",
+      "buy_volume": "19.05410001",
+      "sell_volume": "0",
+      "net": "19.05410001",
+      "transfer_count": 2,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
     }
   ],
   "buyers_sellers_30d": [
     {
       "address": "0x41bed30955e6368d6e4bfbde195f96cd882913ab",
-      "buy_volume": "18141.282505622439955781",
+      "buy_volume": "16345.763628642185100819",
       "sell_volume": "0",
-      "net": "18141.282505622439955781",
-      "transfer_count": 6919,
+      "net": "16345.763628642185100819",
+      "transfer_count": 5926,
       "chains": [
         "gnosis"
       ],
@@ -2087,10 +2084,10 @@
     },
     {
       "address": "0x6a000f20005980200259b80c5102003040001068",
-      "buy_volume": "7598.838537614838405041",
-      "sell_volume": "2193.446827765473895413",
-      "net": "5405.391709849364509628",
-      "transfer_count": 9109,
+      "buy_volume": "7389.185857619166858686",
+      "sell_volume": "2172.299012742933616243",
+      "net": "5216.886844876233242443",
+      "transfer_count": 9012,
       "chains": [
         "ethereum",
         "gnosis"
@@ -2098,50 +2095,50 @@
       "balance": "0.000000000000000002"
     },
     {
+      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
+      "buy_volume": "5152.93189861126639183",
+      "sell_volume": "0",
+      "net": "5152.93189861126639183",
+      "transfer_count": 1672,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "937.781120151320613064"
+    },
+    {
       "address": "0xfdff0b569f14af593d446e51b3e42f502124ac85",
-      "buy_volume": "2912.069461145623726215",
-      "sell_volume": "6618.071360971677886403",
-      "net": "-3706.001899826054160188",
-      "transfer_count": 497,
+      "buy_volume": "3152.445733582092666603",
+      "sell_volume": "6613.057385235429219407",
+      "net": "-3460.611651653336552804",
+      "transfer_count": 552,
       "chains": [
         "ethereum",
         "gnosis"
       ],
-      "balance": "153.89752964442022899"
-    },
-    {
-      "address": "0x5c95d67fed6d3183b6ffaef4edb8a86ee0bc11d5",
-      "buy_volume": "3167.816347085123308565",
-      "sell_volume": "0",
-      "net": "3167.816347085123308565",
-      "transfer_count": 901,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "3167.816347085123308565"
+      "balance": "138.905411118100274269"
     },
     {
       "address": "0xc0aa8d234db068fee7454fb5dc8f696611cbe6d9",
       "buy_volume": "0",
-      "sell_volume": "2963.9203",
-      "net": "-2963.9203",
-      "transfer_count": 8391,
+      "sell_volume": "2972.0233",
+      "net": "-2972.0233",
+      "transfer_count": 8300,
       "chains": [
         "gnosis"
       ],
-      "balance": "96.530458225633787308"
+      "balance": "217.46238451387384939"
     },
     {
       "address": "0xb75af6aac0b676857bd1e0953849593b25f6adec",
-      "buy_volume": "2367.35110291",
+      "buy_volume": "2389.01320291",
       "sell_volume": "309.307590788785696996",
-      "net": "2058.043512121214303004",
+      "net": "2079.705612121214303004",
       "transfer_count": 37,
       "chains": [
         "ethereum",
         "gnosis"
       ],
-      "balance": "11.946196936779557094"
+      "balance": "3.605496936779557094"
     },
     {
       "address": "0x2b9c259afb27b5d24563e99b9d6ccda8cf2f077d",
@@ -2167,14 +2164,25 @@
     },
     {
       "address": "0x212be33e51e727d4efba612653dddceb57c109ca",
-      "buy_volume": "1412.122787809588587425",
+      "buy_volume": "1411.602425901311798497",
       "sell_volume": "0",
-      "net": "1412.122787809588587425",
-      "transfer_count": 763,
+      "net": "1411.602425901311798497",
+      "transfer_count": 768,
       "chains": [
         "gnosis"
       ],
       "balance": "0"
+    },
+    {
+      "address": "0x509ad7278a2f6530bc24590c83e93faf8fd46e99",
+      "buy_volume": "1367.737025564081980719",
+      "sell_volume": "0",
+      "net": "1367.737025564081980719",
+      "transfer_count": 2,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "83094.471827382828548724"
     },
     {
       "address": "0xe837770fc477522360cf620bc15ba34cb9e4a6d0",
@@ -2191,9 +2199,9 @@
     {
       "address": "0x3a23f943181408eac424116af7b7790c94cb97a5",
       "buy_volume": "1444.400779522554607895",
-      "sell_volume": "212.711496848655955943",
-      "net": "1231.689282673898651952",
-      "transfer_count": 106,
+      "sell_volume": "177.73655158573360079",
+      "net": "1266.664227936821007105",
+      "transfer_count": 91,
       "chains": [
         "ethereum",
         "gnosis"
@@ -2203,13 +2211,13 @@
     {
       "address": "0x78cee97c23560279909c0215e084db293f036774",
       "buy_volume": "0",
-      "sell_volume": "1190",
-      "net": "-1190",
-      "transfer_count": 110,
+      "sell_volume": "1194.287983485673220781",
+      "net": "-1194.287983485673220781",
+      "transfer_count": 111,
       "chains": [
         "ethereum"
       ],
-      "balance": "4.287983485673220781"
+      "balance": "0"
     },
     {
       "address": "0x264fb7ad1b70d4f03aa538a9e8d6e56bfddf9a80",
@@ -2237,9 +2245,9 @@
     {
       "address": "0xefb37bd3a9ed2f768bf6f79d0379fe7f9be50f49",
       "buy_volume": "0",
-      "sell_volume": "941.314900542623101091",
-      "net": "-941.314900542623101091",
-      "transfer_count": 935,
+      "sell_volume": "979.614135614131280208",
+      "net": "-979.614135614131280208",
+      "transfer_count": 989,
       "chains": [
         "gnosis"
       ],
@@ -2287,7 +2295,7 @@
       "chains": [
         "ethereum"
       ],
-      "balance": "1554.743704040591459391"
+      "balance": "1406.290583920591459391"
     },
     {
       "address": "0x7ea366e151b3e4f22333bc94fb7933d06f9ee98a",
@@ -2299,6 +2307,17 @@
         "ethereum"
       ],
       "balance": "0"
+    },
+    {
+      "address": "0x7fbe62d931f9ea32ca9b8779285e092bbf343b70",
+      "buy_volume": "2805.690411223481018772",
+      "sell_volume": "2035.721041874313976212",
+      "net": "769.96936934916704256",
+      "transfer_count": 19,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "313.604354704596579137"
     },
     {
       "address": "0xbd54e86be49ab801ff75039c29f10deacc86850c",
@@ -2334,15 +2353,37 @@
       "balance": "0"
     },
     {
+      "address": "0xee845948e6806d12e966137caa07d49bbe632fe3",
+      "buy_volume": "655.90971329",
+      "sell_volume": "1343.06599329",
+      "net": "-687.15628",
+      "transfer_count": 62,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
       "address": "0x073e81d92bd8b39562106819d12346240606f04a",
       "buy_volume": "0",
-      "sell_volume": "677.834873122730623278",
-      "net": "-677.834873122730623278",
-      "transfer_count": 845,
+      "sell_volume": "680.598611569813925441",
+      "net": "-680.598611569813925441",
+      "transfer_count": 812,
       "chains": [
         "gnosis"
       ],
       "balance": "0.000000000000000001"
+    },
+    {
+      "address": "0x150819f32b6e5957b4116ec8df419e50b15bb679",
+      "buy_volume": "0",
+      "sell_volume": "661.26546",
+      "net": "-661.26546",
+      "transfer_count": 9,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
     },
     {
       "address": "0x6da6b1efccb7216078b9004535941b71eed30b0f",
@@ -2368,22 +2409,11 @@
       "balance": "0"
     },
     {
-      "address": "0x7fbe62d931f9ea32ca9b8779285e092bbf343b70",
-      "buy_volume": "2645.18127201766226158",
-      "sell_volume": "2035.721041874313976212",
-      "net": "609.460230143348285368",
-      "transfer_count": 17,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "153.095215498777821945"
-    },
-    {
       "address": "0x74fc507e669beba4cd6c22d60826ff00efa67a61",
-      "buy_volume": "581.126492104237181839",
-      "sell_volume": "1178.74780494402325402",
-      "net": "-597.621312839786072181",
-      "transfer_count": 2521,
+      "buy_volume": "590.089449926120926988",
+      "sell_volume": "1186.551829474718116476",
+      "net": "-596.462379548597189488",
+      "transfer_count": 2631,
       "chains": [
         "gnosis"
       ],
@@ -2391,10 +2421,10 @@
     },
     {
       "address": "0x97a8353dc9c4f35eb686cb1bbb5d49eec0491b3e",
-      "buy_volume": "291.962592956156760434",
-      "sell_volume": "873.682261860588777048",
-      "net": "-581.719668904432016614",
-      "transfer_count": 1682,
+      "buy_volume": "287.7617021606558333",
+      "sell_volume": "869.449699482171822698",
+      "net": "-581.687997321515989398",
+      "transfer_count": 1645,
       "chains": [
         "gnosis"
       ],
@@ -2406,17 +2436,6 @@
       "sell_volume": "571.682011146145425855",
       "net": "-571.682011146145425855",
       "transfer_count": 3,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xee845948e6806d12e966137caa07d49bbe632fe3",
-      "buy_volume": "353.46233507",
-      "sell_volume": "924.75392507",
-      "net": "-571.29159",
-      "transfer_count": 49,
       "chains": [
         "ethereum"
       ],
@@ -2445,6 +2464,17 @@
       "balance": "0"
     },
     {
+      "address": "0x7df5b9ff2fd94177a4f80c53f0e94fed7c368c52",
+      "buy_volume": "534.128245325965366246",
+      "sell_volume": "0",
+      "net": "534.128245325965366246",
+      "transfer_count": 42,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
+    },
+    {
       "address": "0xf6801d319497789f934ec7f83e142a9536312b08",
       "buy_volume": "532.49658365746229566",
       "sell_volume": "0",
@@ -2454,17 +2484,6 @@
         "ethereum"
       ],
       "balance": "0"
-    },
-    {
-      "address": "0x7df5b9ff2fd94177a4f80c53f0e94fed7c368c52",
-      "buy_volume": "530.109741053758550691",
-      "sell_volume": "0",
-      "net": "530.109741053758550691",
-      "transfer_count": 38,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "1.003921303572851085"
     },
     {
       "address": "0xa9f360246d32dab016eaa41d7aa0f6000c73eb8c",
@@ -2478,26 +2497,15 @@
       "balance": "0.13076932535359626"
     },
     {
-      "address": "0x150819f32b6e5957b4116ec8df419e50b15bb679",
-      "buy_volume": "0",
-      "sell_volume": "503.68162",
-      "net": "-503.68162",
-      "transfer_count": 7,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
       "address": "0x8243c2021fb560f92b027aca8999b5069873c341",
-      "buy_volume": "463.8616",
-      "sell_volume": "0",
-      "net": "463.8616",
-      "transfer_count": 32,
+      "buy_volume": "478.8564",
+      "sell_volume": "14",
+      "net": "464.8564",
+      "transfer_count": 34,
       "chains": [
         "ethereum"
       ],
-      "balance": "14.56567882443824553"
+      "balance": "15.066437367884218981"
     },
     {
       "address": "0x9bcd841436ef4f85dacefb1aec772af71619024e",
@@ -2522,6 +2530,17 @@
       "balance": "0"
     },
     {
+      "address": "0x4e187d91c39686099feaf2b57003bf524a2787c6",
+      "buy_volume": "25.592996175875624602",
+      "sell_volume": "414.397776306993330718",
+      "net": "-388.804780131117706116",
+      "transfer_count": 52,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
       "address": "0xb9012e211b0f725004d6562ebbf591cba52bf710",
       "buy_volume": "0",
       "sell_volume": "378.32165584084060909",
@@ -2533,11 +2552,11 @@
       "balance": "0"
     },
     {
-      "address": "0x4e187d91c39686099feaf2b57003bf524a2787c6",
-      "buy_volume": "25.592996175875624602",
-      "sell_volume": "386.958838466319264947",
-      "net": "-361.365842290443640345",
-      "transfer_count": 48,
+      "address": "0x5e1f62dac767b0491e3ce72469c217365d5b48cc",
+      "buy_volume": "574.918230655034236659",
+      "sell_volume": "200.280532902877668838",
+      "net": "374.637697752156567821",
+      "transfer_count": 69,
       "chains": [
         "ethereum"
       ],
@@ -2555,59 +2574,15 @@
       "balance": "0.000000000000000001"
     },
     {
-      "address": "0x5e1f62dac767b0491e3ce72469c217365d5b48cc",
-      "buy_volume": "525.743901631796442198",
-      "sell_volume": "200.280532902877668838",
-      "net": "325.46336872891877336",
-      "transfer_count": 59,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
-    },
-    {
-      "address": "0xd862cdcfeb856c32b3c4f7563f4811d8ddfd42e2",
-      "buy_volume": "773.1133",
-      "sell_volume": "1091.439536000000000512",
-      "net": "-318.326236000000000512",
-      "transfer_count": 233,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "11.995107999999987968"
-    },
-    {
       "address": "0x9ea52f774e21ff2fd4dd452160d612c764d21581",
-      "buy_volume": "283.966575915873789222",
-      "sell_volume": "585.517669514977723415",
-      "net": "-301.551093599103934193",
-      "transfer_count": 2188,
+      "buy_volume": "287.98250211844354417",
+      "sell_volume": "587.202272150185041939",
+      "net": "-299.219770031741497769",
+      "transfer_count": 2164,
       "chains": [
         "gnosis"
       ],
-      "balance": "5.574916532093074482"
-    },
-    {
-      "address": "0x8678f58ac6c4748b5289d0db70e627eef395dead",
-      "buy_volume": "301.118791112385860636",
-      "sell_volume": "0",
-      "net": "301.118791112385860636",
-      "transfer_count": 3,
-      "chains": [
-        "gnosis"
-      ],
-      "balance": "309.498843249589898327"
-    },
-    {
-      "address": "0x680dd69ef0154978f785c15e9139437eac255dfa",
-      "buy_volume": "284.9797",
-      "sell_volume": "0",
-      "net": "284.9797",
-      "transfer_count": 5,
-      "chains": [
-        "ethereum"
-      ],
-      "balance": "0"
+      "balance": "4.086034134994871235"
     },
     {
       "address": "0xf26eca531c8b5f6ad7e2c2cdf17ce93005bae875",
@@ -2622,14 +2597,36 @@
     },
     {
       "address": "0xda74c47b560028cc864e2c7c064e1b05e994d41c",
-      "buy_volume": "267.676533958052656273",
+      "buy_volume": "276.537461174246061689",
       "sell_volume": "0",
-      "net": "267.676533958052656273",
-      "transfer_count": 520,
+      "net": "276.537461174246061689",
+      "transfer_count": 551,
       "chains": [
         "gnosis"
       ],
-      "balance": "21.675331635555455746"
+      "balance": "21.724417163950227648"
+    },
+    {
+      "address": "0x061682c42bcded4b455dbd0b3398b3d8dfd9036f",
+      "buy_volume": "0",
+      "sell_volume": "267.674867170724630231",
+      "net": "-267.674867170724630231",
+      "transfer_count": 27,
+      "chains": [
+        "ethereum"
+      ],
+      "balance": "0"
+    },
+    {
+      "address": "0xbac1defdd2ed30a86892256ceeff27e6fa7b02fa",
+      "buy_volume": "2632.548463137974633916",
+      "sell_volume": "2368.903757835833893494",
+      "net": "263.644705302140740422",
+      "transfer_count": 35898,
+      "chains": [
+        "gnosis"
+      ],
+      "balance": "0"
     }
   ],
   "labels": {
@@ -2705,6 +2702,6 @@
     "0xf7878463070a013a58f547b2b08df47a1fb91744": "Uniswap V3: GNO Pool",
     "0xf977814e90da44bfa03b6295a0616a897441acec": "Binance: Hot Wallet 20"
   },
-  "synced_at": "2026-02-23T07:03:31.520Z",
-  "total_transfers": 10376581
+  "synced_at": "2026-02-26T05:27:37.055Z",
+  "total_transfers": 10403871
 }
